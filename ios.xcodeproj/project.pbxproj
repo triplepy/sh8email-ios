@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62174E661D90320100EE5DB2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62174E651D90320100EE5DB2 /* Media.xcassets */; };
+		62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62300D791D99676F00725805 /* CustomTextField.swift */; };
 		623447E51D979EEC0000A086 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623447E41D979EEC0000A086 /* Mail.swift */; };
 		626FD9451D8AC1F100E6F41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FD9441D8AC1F100E6F41E /* AppDelegate.swift */; };
 		626FD9471D8AC1F100E6F41E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FD9461D8AC1F100E6F41E /* ViewController.swift */; };
@@ -205,6 +206,7 @@
 
 /* Begin PBXFileReference section */
 		62174E651D90320100EE5DB2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		62300D791D99676F00725805 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		6234477B1D979DD80000A086 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		623447AE1D979DDD0000A086 /* AlamofireObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireObjectMapper.xcodeproj; path = AlamofireObjectMapper/AlamofireObjectMapper.xcodeproj; sourceTree = "<group>"; };
 		623447C61D979DE30000A086 /* ObjectMapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectMapper.xcodeproj; path = ObjectMapper/ObjectMapper.xcodeproj; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				626FD94D1D8AC1F100E6F41E /* LaunchScreen.storyboard */,
 				626FD9501D8AC1F100E6F41E /* Info.plist */,
 				623447E41D979EEC0000A086 /* Mail.swift */,
+				62300D791D99676F00725805 /* CustomTextField.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */,
 				623447E51D979EEC0000A086 /* Mail.swift in Sources */,
 				626FD9471D8AC1F100E6F41E /* ViewController.swift in Sources */,
 				626FD9451D8AC1F100E6F41E /* AppDelegate.swift in Sources */,

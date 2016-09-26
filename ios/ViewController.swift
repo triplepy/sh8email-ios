@@ -29,15 +29,18 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
         Alamofire.request("https://sh8.email/rest/mail/test/list/",method:.post, parameters: params, encoding: URLEncoding.httpBody).responseArray { (response: DataResponse<[Mail]>) in
             let mailResponse = response.result.value
             
-            if let mailResponse = mailResponse {
-                for mail in mailResponse {
-                    self.titles.append(mail.sender!)
+            if mailResponse?.count != nil {
+                if let mailResponse = mailResponse {
+                    for mail in mailResponse {
+                        self.titles.append(mail.sender!)
+                    }
                 }
-            }
-            self.tableView.beginUpdates()
-            self.tableView.insertRows(at: [IndexPath(row: self.titles.count-1, section: 0)], with: .automatic)
-            self.tableView.endUpdates()
+                
+                self.tableView.beginUpdates()
+                self.tableView.insertRows(at: [IndexPath(row: self.titles.count-1, section: 0)], with: .automatic)
+                self.tableView.endUpdates()
 
+            }
         }
     }
     
