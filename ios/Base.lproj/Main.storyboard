@@ -56,18 +56,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-cn-zAS">
-                                <rect key="frame" x="51" y="410" width="270" height="30"/>
-                                <color key="backgroundColor" red="0.047058823529411764" green="0.48627450980392156" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="메일 확인">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7no-o7-2tf">
+                                <rect key="frame" x="51" y="430" width="273" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="이게 뭐고, 어떻게 쓰는거죠?">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="8za-Zv-Bfi"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-VL-Dm1">
-                                <rect key="frame" x="51" y="209" width="273" height="37"/>
+                                <rect key="frame" x="52" y="181" width="273" height="37.5"/>
                                 <string key="text">세상에서 가장 조용한 이메일
 
 </string>
@@ -76,13 +73,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-F4-Rim" customClass="CustomTextField" customModule="ios" customModuleProvider="target">
-                                <rect key="frame" x="54" y="318" width="155" height="30"/>
+                                <rect key="frame" x="52" y="282" width="155" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="fXb-XH-xx5"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
                                         <real key="value" value="15"/>
@@ -90,7 +87,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@sh8.email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-9i-1tN">
-                                <rect key="frame" x="217" y="321" width="107" height="25"/>
+                                <rect key="frame" x="217" y="285" width="107" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="Mik-tu-vZQ"/>
                                 </constraints>
@@ -104,12 +101,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7no-o7-2tf">
-                                <rect key="frame" x="51" y="532" width="273" height="30"/>
-                                <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="이게 뭐고, 어떻게 쓰는거죠?">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-cn-zAS">
+                                <rect key="frame" x="52" y="356" width="270" height="30"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.48627450980392156" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="메일 확인">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="8za-Zv-Bfi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,22 +118,22 @@
                             <constraint firstItem="WOO-IG-L31" firstAttribute="top" secondItem="P6g-dg-cTD" secondAttribute="bottom" constant="8" id="3Fg-x5-gi1"/>
                             <constraint firstItem="7no-o7-2tf" firstAttribute="centerX" secondItem="GND-dH-ZRN" secondAttribute="centerX" id="3uE-Rg-1E2"/>
                             <constraint firstItem="LzW-9i-1tN" firstAttribute="trailing" secondItem="7no-o7-2tf" secondAttribute="trailing" id="4ct-TD-vup"/>
-                            <constraint firstItem="NPH-cn-zAS" firstAttribute="top" secondItem="rU5-F4-Rim" secondAttribute="bottom" constant="62" id="816-ck-Q7e"/>
-                            <constraint firstItem="NPH-cn-zAS" firstAttribute="leading" secondItem="7no-o7-2tf" secondAttribute="leading" id="BC8-st-4v8"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="centerY" secondItem="GND-dH-ZRN" secondAttribute="centerY" id="FM9-m0-qhv"/>
+                            <constraint firstItem="NPH-cn-zAS" firstAttribute="top" secondItem="rU5-F4-Rim" secondAttribute="bottom" constant="59" id="816-ck-Q7e"/>
+                            <constraint firstItem="NPH-cn-zAS" firstAttribute="leading" secondItem="7no-o7-2tf" secondAttribute="leading" constant="1" id="BC8-st-4v8"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="centerY" secondItem="GND-dH-ZRN" secondAttribute="centerY" constant="-36.5" id="FM9-m0-qhv"/>
                             <constraint firstItem="LzW-9i-1tN" firstAttribute="trailing" secondItem="P6g-dg-cTD" secondAttribute="trailing" id="GqW-pw-QUO"/>
-                            <constraint firstItem="7no-o7-2tf" firstAttribute="top" secondItem="NPH-cn-zAS" secondAttribute="bottom" constant="92" id="Hjc-YF-Axl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NPH-cn-zAS" secondAttribute="trailing" constant="38" id="K0L-8C-b8r"/>
-                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="centerX" secondItem="GND-dH-ZRN" secondAttribute="centerX" id="L1w-P9-pq8"/>
-                            <constraint firstItem="rU5-F4-Rim" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="72" id="M1S-6b-Kic"/>
+                            <constraint firstItem="7no-o7-2tf" firstAttribute="top" secondItem="NPH-cn-zAS" secondAttribute="bottom" constant="29" id="Hjc-YF-Axl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NPH-cn-zAS" secondAttribute="trailing" constant="37" id="K0L-8C-b8r"/>
+                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="centerX" secondItem="GND-dH-ZRN" secondAttribute="centerX" constant="1" id="L1w-P9-pq8"/>
+                            <constraint firstItem="rU5-F4-Rim" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="63.5" id="M1S-6b-Kic"/>
                             <constraint firstItem="LzW-9i-1tN" firstAttribute="centerY" secondItem="rU5-F4-Rim" secondAttribute="centerY" id="ZX2-Cu-ziJ"/>
                             <constraint firstItem="WOO-IG-L31" firstAttribute="top" secondItem="5wZ-nA-oIc" secondAttribute="bottom" constant="56" id="biW-PF-OQd"/>
                             <constraint firstItem="LzW-9i-1tN" firstAttribute="trailing" secondItem="WOO-IG-L31" secondAttribute="trailing" id="cKX-YI-Rp6"/>
                             <constraint firstItem="WOO-IG-L31" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="jcx-4R-FTf"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" constant="8" id="oG4-mA-plP"/>
-                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="top" secondItem="WOO-IG-L31" secondAttribute="bottom" constant="50" id="pLT-4o-Jc6"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="trailing" secondItem="Qai-VL-Dm1" secondAttribute="trailing" id="szv-48-CYz"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="75" id="x8x-Mq-tDx"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" constant="10" id="oG4-mA-plP"/>
+                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="top" secondItem="WOO-IG-L31" secondAttribute="bottom" constant="22" id="pLT-4o-Jc6"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="trailing" secondItem="Qai-VL-Dm1" secondAttribute="trailing" constant="-1" id="szv-48-CYz"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="66.5" id="x8x-Mq-tDx"/>
                         </constraints>
                     </view>
                 </viewController>
