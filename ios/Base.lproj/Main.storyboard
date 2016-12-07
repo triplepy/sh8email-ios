@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="52.173913043478265" y="120.65217391304348"/>
         </scene>
-        <!--View Controller-->
+        <!--sh8.email-->
         <scene sceneID="vBs-Od-p0O">
             <objects>
-                <viewController id="9XP-Hk-AxK" sceneMemberID="viewController">
+                <viewController title="sh8.email" id="9XP-Hk-AxK" customClass="ViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5wZ-nA-oIc"/>
                         <viewControllerLayoutGuide type="bottom" id="U2W-ic-yPT"/>
@@ -108,6 +108,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="checkMailButtonTapped:" destination="9XP-Hk-AxK" eventType="touchUpInside" id="nmL-7x-3yu"/>
                                     <segue destination="BYZ-38-t0r" kind="showDetail" action="showViewController:sender:" id="8za-Zv-Bfi"/>
                                 </connections>
                             </button>
@@ -136,6 +137,11 @@
                             <constraint firstItem="LzW-9i-1tN" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="66.5" id="x8x-Mq-tDx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkEmailButton" destination="NPH-cn-zAS" id="SfX-qZ-kse"/>
+                        <outlet property="emailField" destination="rU5-F4-Rim" id="cRe-Tp-kUC"/>
+                        <outlet property="viewInstructionsButton" destination="7no-o7-2tf" id="bCx-hc-wkL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7J-US-CgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
