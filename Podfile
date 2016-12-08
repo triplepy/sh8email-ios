@@ -3,7 +3,7 @@ platform :ios, '10.0'
 
 use_frameworks!
 
-target 'ios' do
+target 'sh8email' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
