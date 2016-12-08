@@ -10,12 +10,18 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 
-class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+	
+	@IBOutlet var emailField: CustomTextField!
+	@IBOutlet var checkEmailButton: UIButton!
+	@IBOutlet var viewInstructionsButton: UIButton!
+	
     @IBOutlet weak var tableView: UITableView!
-    
-    var titles = [String]()
-
+	
+	var titles = [String]()
+	
+	// MARK: VIEW
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -73,6 +79,10 @@ class ViewController:  UIViewController, UITableViewDelegate, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // MARK: Actions
+	
+	@IBAction func checkMailButtonTapped(_ sender: Any) {
+		var username = emailField.text
+	}
 }
 
