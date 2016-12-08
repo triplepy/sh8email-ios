@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3511F8201DF9BD080050040C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3511F81F1DF9BD080050040C /* Default-568h@2x.png */; };
-		4D1C40C2F7C8F5E62D430DB2 /* Pods_sh8email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D35B80B3A1387D3664D4FCAF /* Pods_sh8email.framework */; };
+		35EE31801DF9C4360087DB97 /* emailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */; };
+		37BAFC9EDE0C29D7FD117258 /* Pods_sh8email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13966BBE424ABF97B78D533D /* Pods_sh8email.framework */; };
 		62174E661D90320100EE5DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62174E651D90320100EE5DB2 /* Assets.xcassets */; };
 		62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62300D791D99676F00725805 /* CustomTextField.swift */; };
 		623447E51D979EEC0000A086 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623447E41D979EEC0000A086 /* Mail.swift */; };
@@ -18,7 +18,6 @@
 		626FD94F1D8AC1F100E6F41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 626FD94D1D8AC1F100E6F41E /* LaunchScreen.storyboard */; };
 		626FD95A1D8AC1F100E6F41E /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FD9591D8AC1F100E6F41E /* iosTests.swift */; };
 		626FD9651D8AC1F100E6F41E /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FD9641D8AC1F100E6F41E /* iosUITests.swift */; };
-		FD7ACC6DBDB6CFD3FB1BF29F /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8A77ED4A19CAE46A5223CF /* Pods_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13966BBE424ABF97B78D533D /* Pods_sh8email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sh8email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CC55C304869ECB78E75E8D /* Pods-sh8email.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sh8email.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sh8email/Pods-sh8email.debug.xcconfig"; sourceTree = "<group>"; };
-		3511F81F1DF9BD080050040C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4D8A77ED4A19CAE46A5223CF /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailTableViewCell.swift; sourceTree = "<group>"; };
 		62174E651D90320100EE5DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		62300D791D99676F00725805 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		623447E41D979EEC0000A086 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		626FD9641D8AC1F100E6F41E /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
 		626FD9661D8AC1F100E6F41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69DB4C3142818023442DEB5D /* Pods-sh8email.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sh8email.release.xcconfig"; path = "Pods/Target Support Files/Pods-sh8email/Pods-sh8email.release.xcconfig"; sourceTree = "<group>"; };
-		D35B80B3A1387D3664D4FCAF /* Pods_sh8email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sh8email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7ACC6DBDB6CFD3FB1BF29F /* Pods_ios.framework in Frameworks */,
-				4D1C40C2F7C8F5E62D430DB2 /* Pods_sh8email.framework in Frameworks */,
+				37BAFC9EDE0C29D7FD117258 /* Pods_sh8email.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +88,6 @@
 		626FD9381D8AC1F100E6F41E = {
 			isa = PBXGroup;
 			children = (
-				3511F81F1DF9BD080050040C /* Default-568h@2x.png */,
 				626FD9431D8AC1F100E6F41E /* sh8email */,
 				626FD9581D8AC1F100E6F41E /* sh8emailTests */,
 				626FD9631D8AC1F100E6F41E /* sh8emailUITests */,
@@ -122,6 +118,7 @@
 				626FD9501D8AC1F100E6F41E /* Info.plist */,
 				623447E41D979EEC0000A086 /* Mail.swift */,
 				62300D791D99676F00725805 /* CustomTextField.swift */,
+				35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */,
 			);
 			path = sh8email;
 			sourceTree = "<group>";
@@ -147,8 +144,7 @@
 		B73CD107BEE21FCA40015C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4D8A77ED4A19CAE46A5223CF /* Pods_ios.framework */,
-				D35B80B3A1387D3664D4FCAF /* Pods_sh8email.framework */,
+				13966BBE424ABF97B78D533D /* Pods_sh8email.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				626FD94F1D8AC1F100E6F41E /* LaunchScreen.storyboard in Resources */,
-				3511F8201DF9BD080050040C /* Default-568h@2x.png in Resources */,
 				62174E661D90320100EE5DB2 /* Assets.xcassets in Resources */,
 				626FD94A1D8AC1F100E6F41E /* Main.storyboard in Resources */,
 			);
@@ -349,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE31801DF9C4360087DB97 /* emailTableViewCell.swift in Sources */,
 				62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */,
 				623447E51D979EEC0000A086 /* Mail.swift in Sources */,
 				626FD9471D8AC1F100E6F41E /* ViewController.swift in Sources */,
@@ -506,7 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C579B8B4M9;
-				INFOPLIST_FILE = ios/Info.plist;
+				INFOPLIST_FILE = sh8email/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.ios;
@@ -522,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C579B8B4M9;
-				INFOPLIST_FILE = ios/Info.plist;
+				INFOPLIST_FILE = sh8email/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.ios;
@@ -537,7 +533,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = iosTests/Info.plist;
+				INFOPLIST_FILE = sh8emailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.iosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +547,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = iosTests/Info.plist;
+				INFOPLIST_FILE = sh8emailTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.iosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,7 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = iosUITests/Info.plist;
+				INFOPLIST_FILE = sh8emailUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.iosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,7 +573,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = iosUITests/Info.plist;
+				INFOPLIST_FILE = sh8emailUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.triplepy.sh8email.iosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
