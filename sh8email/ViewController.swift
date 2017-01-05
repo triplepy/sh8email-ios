@@ -22,16 +22,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
 	// MARK: VIEW
 	
+	override func viewWillAppear(_ animated: Bool) {
+//		tableView.delegate = self
+//		tableView.dataSource = self
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        let params: Parameters = [
-            "recipient":"test"
-        ]
-    }
+	}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
@@ -65,9 +63,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: Actions
 	
 	@IBAction func checkMailButtonTapped(_ sender: Any) {
-		var username = emailField.text
+		let username = emailField.text
 		
-		Alamofire.request("https://sh8.email/rest/mail/test/list/", encoding: URLEncoding.httpBody).responseArray { (response: DataResponse<[Mail]>) in
+		Alamofire.request("https://sh8.email/rest/mail/\(username)/list/", encoding: URLEncoding.httpBody).responseArray { (response: DataResponse<[Mail]>) in
 			let mailResponse = response.result.value
 			
 			if mailResponse?.count != nil {
