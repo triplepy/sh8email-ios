@@ -170,7 +170,7 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re2-T1-uPJ">
-                                <rect key="frame" x="110" y="281" width="194" height="39"/>
+                                <rect key="frame" x="50" y="281" width="314" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="sh8.email 사용하기"/>
                                 <connections>
@@ -183,8 +183,8 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                             <constraint firstItem="9fY-qq-sL2" firstAttribute="top" secondItem="vnf-pE-H0X" secondAttribute="bottom" constant="20" id="1Ax-oy-NjJ"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="bottom" secondItem="HcF-CC-otK" secondAttribute="top" constant="49" id="NzG-qe-RHu"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="top" secondItem="re2-T1-uPJ" secondAttribute="bottom" constant="65" id="WoV-la-XcQ"/>
-                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="90" id="X6R-f1-uwU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="90" id="cms-9H-POc"/>
+                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="30" id="X6R-f1-uwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="30" id="cms-9H-POc"/>
                             <constraint firstItem="9fY-qq-sL2" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="40" id="g7Y-sD-Yr1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9fY-qq-sL2" secondAttribute="trailing" constant="40" id="ixo-SS-W9L"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="centerX" secondItem="9fY-qq-sL2" secondAttribute="centerX" id="nAO-NC-U1f"/>
@@ -339,11 +339,11 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                                         <rect key="frame" x="0.0" y="28" width="374" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ecu-Ad-OY2" id="kye-oX-tCk">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe &lt;john.doe@example.com&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxf-tK-WND">
-                                                    <rect key="frame" x="8" y="8" width="237.33333333333334" height="17"/>
+                                                    <rect key="frame" x="8" y="8" width="238" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
