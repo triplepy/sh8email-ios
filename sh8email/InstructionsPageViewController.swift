@@ -21,7 +21,6 @@ class InstructionsPageViewController: UIPageViewController {
 			                   animated: true,
 			                   completion: nil)
 		}
-
 	}
 	
 	private(set) lazy var orderedViewControllers: [UIViewController] = {
@@ -34,7 +33,6 @@ class InstructionsPageViewController: UIPageViewController {
 		return UIStoryboard(name: "Main", bundle: nil) .
 			instantiateViewController(withIdentifier: "Instructions\(instruction_index)")
 	}
-
 }
 
 // MARK: UIPageViewControllerDataSource

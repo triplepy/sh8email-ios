@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	
     @IBOutlet weak var tableView: UITableView!
 	
+	@IBAction func unwindToMain(segue: UIStoryboardSegue) {}
+
 	var titles = [String]()
 	
 	// MARK: VIEW

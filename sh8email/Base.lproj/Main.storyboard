@@ -18,10 +18,10 @@
             </objects>
             <point key="canvasLocation" x="-788" y="813"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions Page 1-->
         <scene sceneID="Ng5-L9-V3W">
             <objects>
-                <viewController storyboardIdentifier="Instructions1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="isZ-Nu-D6j" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instructions1" title="Instructions Page 1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="isZ-Nu-D6j" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RHG-KG-uww"/>
                         <viewControllerLayoutGuide type="bottom" id="gW0-OV-eWY"/>
@@ -84,10 +84,10 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
             </objects>
             <point key="canvasLocation" x="-1449.2753623188407" y="1490.217391304348"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions Page 2-->
         <scene sceneID="rOQ-En-ATd">
             <objects>
-                <viewController storyboardIdentifier="Instructions2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jjx-eK-LIw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instructions2" title="Instructions Page 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jjx-eK-LIw" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Lr-4y-eBS"/>
                         <viewControllerLayoutGuide type="bottom" id="IbE-76-s69"/>
@@ -137,10 +137,10 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
             </objects>
             <point key="canvasLocation" x="-777" y="1494"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions Page 3-->
         <scene sceneID="QkQ-3R-YEo">
             <objects>
-                <viewController storyboardIdentifier="Instructions3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oli-EF-dbn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Instructions3" title="Instructions Page 3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oli-EF-dbn" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SjR-SO-aq6"/>
                         <viewControllerLayoutGuide type="bottom" id="HcF-CC-otK"/>
@@ -169,11 +169,22 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re2-T1-uPJ">
+                                <rect key="frame" x="110" y="281" width="194" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="sh8.email 사용하기"/>
+                                <connections>
+                                    <action selector="returnToMainButton:" destination="oli-EF-dbn" eventType="touchUpInside" id="k1i-Rj-jb1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9fY-qq-sL2" firstAttribute="top" secondItem="vnf-pE-H0X" secondAttribute="bottom" constant="20" id="1Ax-oy-NjJ"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="bottom" secondItem="HcF-CC-otK" secondAttribute="top" constant="49" id="NzG-qe-RHu"/>
+                            <constraint firstItem="XhL-fQ-g95" firstAttribute="top" secondItem="re2-T1-uPJ" secondAttribute="bottom" constant="65" id="WoV-la-XcQ"/>
+                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="90" id="X6R-f1-uwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="90" id="cms-9H-POc"/>
                             <constraint firstItem="9fY-qq-sL2" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="40" id="g7Y-sD-Yr1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9fY-qq-sL2" secondAttribute="trailing" constant="40" id="ixo-SS-W9L"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="centerX" secondItem="9fY-qq-sL2" secondAttribute="centerX" id="nAO-NC-U1f"/>
@@ -182,8 +193,12 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                             <constraint firstItem="vnf-pE-H0X" firstAttribute="top" secondItem="SjR-SO-aq6" secondAttribute="bottom" constant="40" id="xmP-p6-aMC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="78h-TP-Ghg" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="VWm-Bc-t8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gv-7n-OFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="78h-TP-Ghg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-113.04347826086958" y="1495.9239130434785"/>
         </scene>
@@ -324,38 +339,37 @@ sh8.email은 가입없이, 아무 계정으로 바로 메일을 받아볼 수 �
                                         <rect key="frame" x="0.0" y="28" width="374" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ecu-Ad-OY2" id="kye-oX-tCk">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe &lt;john.doe@example.com&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxf-tK-WND">
-                                                    <rect key="frame" x="8" y="8" width="282" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="8" width="237.33333333333334" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22X-LB-Qmb">
-                                                    <rect key="frame" x="324" y="7" width="38" height="21"/>
+                                                    <rect key="frame" x="328" y="8" width="38" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSk-mK-exP">
-                                                    <rect key="frame" x="8" y="37" width="358" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1l-1B-BaM">
+                                                    <rect key="frame" x="8" y="61" width="358" height="90"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1l-1B-BaM">
-                                                    <rect key="frame" x="8" y="130" width="40" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSk-mK-exP">
+                                                    <rect key="frame" x="8" y="32" width="358" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="oSk-mK-exP" firstAttribute="leading" secondItem="s1l-1B-BaM" secondAttribute="leading" id="0el-hU-2pl"/>
-                                                <constraint firstItem="s1l-1B-BaM" firstAttribute="top" secondItem="oSk-mK-exP" secondAttribute="bottom" constant="72" id="Kne-5H-gmZ"/>
                                                 <constraint firstItem="oSk-mK-exP" firstAttribute="leading" secondItem="kye-oX-tCk" secondAttribute="leadingMargin" id="Qrg-ly-toN"/>
                                                 <constraint firstItem="Lxf-tK-WND" firstAttribute="top" secondItem="kye-oX-tCk" secondAttribute="topMargin" id="bXC-DA-Kqq"/>
                                                 <constraint firstItem="oSk-mK-exP" firstAttribute="top" secondItem="Lxf-tK-WND" secondAttribute="bottom" constant="8" symbolic="YES" id="gOw-Im-v7M"/>
