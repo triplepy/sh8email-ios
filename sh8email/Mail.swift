@@ -19,7 +19,11 @@ class Mail: Mappable {
     var recipDate: String?
     var isSecret: Bool?
     var isRead: Bool?
-    
+	
+	var description: String {
+		return "\(self.sender) (\(self.recipDate))\n\(self.subject)\n\(self.contents)"
+	}
+	
     required init?(map: Map) {
     
     }
@@ -34,4 +38,5 @@ class Mail: Mappable {
         isSecret    <- map["isSecret"]
         isRead      <- map["isRead"]
     }
+	
 }
