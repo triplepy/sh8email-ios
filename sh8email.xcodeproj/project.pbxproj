@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35EE31801DF9C4360087DB97 /* emailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */; };
+		357D91931E32321500BC206B /* sh8mailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357D91921E32321500BC206B /* sh8mailTableViewController.swift */; };
+		3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598DEB81E2DF42600CF5764 /* Sh8model.swift */; };
+		35D5A5121E1F367B002CE4BD /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */; };
+		35F6A54E1E337625006B7420 /* sh8mailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6A54D1E337625006B7420 /* sh8mailTableViewCell.swift */; };
 		35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */; };
 		35F828491E1E3F8D0098D3C7 /* InstructionsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F828481E1E3F8D0098D3C7 /* InstructionsImages.xcassets */; };
 		37BAFC9EDE0C29D7FD117258 /* Pods_sh8email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13966BBE424ABF97B78D533D /* Pods_sh8email.framework */; };
@@ -42,7 +45,10 @@
 /* Begin PBXFileReference section */
 		13966BBE424ABF97B78D533D /* Pods_sh8email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sh8email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CC55C304869ECB78E75E8D /* Pods-sh8email.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sh8email.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sh8email/Pods-sh8email.debug.xcconfig"; sourceTree = "<group>"; };
-		35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailTableViewCell.swift; sourceTree = "<group>"; };
+		357D91921E32321500BC206B /* sh8mailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8mailTableViewController.swift; sourceTree = "<group>"; };
+		3598DEB81E2DF42600CF5764 /* Sh8model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8model.swift; sourceTree = "<group>"; };
+		35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		35F6A54D1E337625006B7420 /* sh8mailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8mailTableViewCell.swift; sourceTree = "<group>"; };
 		35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsPageViewController.swift; sourceTree = "<group>"; };
 		35F828481E1E3F8D0098D3C7 /* InstructionsImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = InstructionsImages.xcassets; sourceTree = "<group>"; };
 		62174E651D90320100EE5DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -118,13 +124,16 @@
 				626FD9441D8AC1F100E6F41E /* AppDelegate.swift */,
 				626FD9461D8AC1F100E6F41E /* ViewController.swift */,
 				35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */,
+				3598DEB81E2DF42600CF5764 /* Sh8model.swift */,
 				626FD9481D8AC1F100E6F41E /* Main.storyboard */,
+				35F6A54D1E337625006B7420 /* sh8mailTableViewCell.swift */,
+				357D91921E32321500BC206B /* sh8mailTableViewController.swift */,
 				626FD94D1D8AC1F100E6F41E /* LaunchScreen.storyboard */,
 				626FD9501D8AC1F100E6F41E /* Info.plist */,
-				623447E41D979EEC0000A086 /* Mail.swift */,
 				62300D791D99676F00725805 /* CustomTextField.swift */,
-				35EE317F1DF9C4360087DB97 /* emailTableViewCell.swift */,
+				623447E41D979EEC0000A086 /* Mail.swift */,
 				35F828481E1E3F8D0098D3C7 /* InstructionsImages.xcassets */,
+				35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */,
 			);
 			path = sh8email;
 			sourceTree = "<group>";
@@ -351,11 +360,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */,
 				35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */,
-				35EE31801DF9C4360087DB97 /* emailTableViewCell.swift in Sources */,
 				62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */,
+				357D91931E32321500BC206B /* sh8mailTableViewController.swift in Sources */,
 				623447E51D979EEC0000A086 /* Mail.swift in Sources */,
 				626FD9471D8AC1F100E6F41E /* ViewController.swift in Sources */,
+				35F6A54E1E337625006B7420 /* sh8mailTableViewCell.swift in Sources */,
+				35D5A5121E1F367B002CE4BD /* InstructionsViewController.swift in Sources */,
 				626FD9451D8AC1F100E6F41E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
