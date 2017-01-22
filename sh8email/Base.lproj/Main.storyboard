@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9XP-Hk-AxK">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instructions Page View Controller-->
+        <scene sceneID="Sat-zC-gYz">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="eFN-Be-HAr" customClass="InstructionsPageViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PFK-o6-MHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="813"/>
+        </scene>
+        <!--Instructions Page 1-->
+        <scene sceneID="Ng5-L9-V3W">
+            <objects>
+                <viewController storyboardIdentifier="Instructions1" title="Instructions Page 1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="isZ-Nu-D6j" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RHG-KG-uww"/>
+                        <viewControllerLayoutGuide type="bottom" id="gW0-OV-eWY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5O1-yT-rjh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입없이 바로 받자!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-mS-pQP">
+                                <rect key="frame" x="40" y="40" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-T9-gW4">
+                                <rect key="frame" x="60" y="94" width="294" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="EnE-nr-h5P"/>
+                                </constraints>
+                                <string key="text">메일을 받긴 해야 하는데,
+내 메일함이 더러워지는 것도 싫고, 
+메일 계정 하나 더 만들기도 귀찮죠?
+sh8.email은 가입없이 아무 계정으로 
+바로 메일을 받아볼 수 있습니다.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions1_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ujw-xL-tyn">
+                                <rect key="frame" x="52" y="385" width="310" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Djp-Co-A0g"/>
+                                    <constraint firstAttribute="width" constant="310" id="Dv4-M0-zLx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="38u-8G-pju">
+                                <rect key="frame" x="84.333333333333314" y="214" width="245.33333333333337" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="N3P-KR-UJy"/>
+                                </constraints>
+                                <string key="text">- 온라인 쇼핑몰에서 물건을 구입할 때 
+- 이벤트에 응모할 때 
+- 회원가입할 때 
+- 회원/로그인 기능 개발 시 테스트할 때</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="top" secondItem="gEm-mS-pQP" secondAttribute="bottom" constant="20" id="8cb-OC-fKc"/>
+                            <constraint firstItem="Ujw-xL-tyn" firstAttribute="bottom" secondItem="gW0-OV-eWY" secondAttribute="top" constant="49" id="Gdj-88-4mt"/>
+                            <constraint firstItem="gEm-mS-pQP" firstAttribute="top" secondItem="RHG-KG-uww" secondAttribute="bottom" constant="20" id="PYi-iS-7ou"/>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leadingMargin" constant="40" id="U8M-mz-c7c"/>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="centerX" secondItem="gEm-mS-pQP" secondAttribute="centerX" id="X2r-D4-myb"/>
+                            <constraint firstItem="gEm-mS-pQP" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leadingMargin" constant="20" id="afp-5v-4Mr"/>
+                            <constraint firstItem="38u-8G-pju" firstAttribute="top" secondItem="QUe-T9-gW4" secondAttribute="bottom" constant="8" id="ibb-2e-2yr"/>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="centerX" secondItem="Ujw-xL-tyn" secondAttribute="centerX" id="tj3-nZ-29E"/>
+                            <constraint firstItem="38u-8G-pju" firstAttribute="centerX" secondItem="QUe-T9-gW4" secondAttribute="centerX" id="z62-eu-fnO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gEm-mS-pQP" secondAttribute="trailing" constant="20" id="zAe-py-a4O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuL-99-9Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1406" y="1489"/>
+        </scene>
+        <!--Instructions Page 2-->
+        <scene sceneID="rOQ-En-ATd">
+            <objects>
+                <viewController storyboardIdentifier="Instructions2" title="Instructions Page 2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jjx-eK-LIw" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Lr-4y-eBS"/>
+                        <viewControllerLayoutGuide type="bottom" id="IbE-76-s69"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgK-JG-L6c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남 몰래 받고 싶을 땐!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="7P7-q3-QOr">
+                                <rect key="frame" x="40" y="40" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-kw-C1f">
+                                <rect key="frame" x="60" y="94" width="294" height="43"/>
+                                <string key="text">가입없이 편하게 받고는 싶고,
+남에게 보여주기는 싫고..</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions1_image" translatesAutoresizingMaskIntoConstraints="NO" id="JjV-Us-HFA">
+                                <rect key="frame" x="52" y="385" width="310" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="Djf-iq-m4G"/>
+                                    <constraint firstAttribute="height" constant="400" id="qSe-0v-GLP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-bs-O1e">
+                                <rect key="frame" x="50" y="272" width="314" height="48"/>
+                                <string key="text">"쉿메일"로 메일에 
+비밀번호를 걸어보세요.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JjV-Us-HFA" firstAttribute="bottom" secondItem="IbE-76-s69" secondAttribute="top" constant="49" id="9zv-dg-G5t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QXb-bs-O1e" secondAttribute="trailing" constant="30" id="Bgo-5s-VXY"/>
+                            <constraint firstItem="JjV-Us-HFA" firstAttribute="centerX" secondItem="xUI-kw-C1f" secondAttribute="centerX" id="ED6-yO-l3O"/>
+                            <constraint firstItem="JjV-Us-HFA" firstAttribute="top" secondItem="QXb-bs-O1e" secondAttribute="bottom" constant="65" id="WlA-bH-kuN"/>
+                            <constraint firstItem="7P7-q3-QOr" firstAttribute="top" secondItem="9Lr-4y-eBS" secondAttribute="bottom" constant="20" id="XTb-wA-dn8"/>
+                            <constraint firstItem="xUI-kw-C1f" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="40" id="Zcd-0P-tfZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7P7-q3-QOr" secondAttribute="trailing" constant="20" id="dSL-sy-vbV"/>
+                            <constraint firstItem="xUI-kw-C1f" firstAttribute="top" secondItem="7P7-q3-QOr" secondAttribute="bottom" constant="20" id="ijm-xM-Hie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xUI-kw-C1f" secondAttribute="trailing" constant="40" id="lOX-AM-FMu"/>
+                            <constraint firstItem="QXb-bs-O1e" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="30" id="r2F-pF-i3u"/>
+                            <constraint firstItem="7P7-q3-QOr" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="20" id="wpk-US-qKY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1T-KD-CbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="1489"/>
+        </scene>
+        <!--Instructions Page 3-->
+        <scene sceneID="QkQ-3R-YEo">
+            <objects>
+                <viewController storyboardIdentifier="Instructions3" title="Instructions Page 3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oli-EF-dbn" customClass="InstructionsViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SjR-SO-aq6"/>
+                        <viewControllerLayoutGuide type="bottom" id="HcF-CC-otK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WkH-A8-bhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions1_image" translatesAutoresizingMaskIntoConstraints="NO" id="XhL-fQ-g95">
+                                <rect key="frame" x="52" y="385" width="310" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="IKS-yS-rz4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="WGB-Sx-9Hd"/>
+                                    <constraint firstAttribute="width" constant="310" id="vU8-xv-vsQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세상에서 가장 조용한 이메일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-pE-H0X">
+                                <rect key="frame" x="40" y="40" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-qq-sL2">
+                                <rect key="frame" x="60" y="93.999999999999986" width="294" height="76.666666666666643"/>
+                                <string key="text">"쉿메일"로 전달된 메일은 읽지 않아도
+24시간 후 자동으로 지워지며,
+읽은 후에는 불편하지 않도록 똑똑하게
+알아서 지워줍니다.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re2-T1-uPJ">
+                                <rect key="frame" x="50" y="281" width="314" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="sh8.email 사용하기"/>
+                                <connections>
+                                    <action selector="returnToMainButton:" destination="oli-EF-dbn" eventType="touchUpInside" id="k1i-Rj-jb1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9fY-qq-sL2" firstAttribute="top" secondItem="vnf-pE-H0X" secondAttribute="bottom" constant="20" id="1Ax-oy-NjJ"/>
+                            <constraint firstItem="XhL-fQ-g95" firstAttribute="bottom" secondItem="HcF-CC-otK" secondAttribute="top" constant="49" id="NzG-qe-RHu"/>
+                            <constraint firstItem="XhL-fQ-g95" firstAttribute="top" secondItem="re2-T1-uPJ" secondAttribute="bottom" constant="65" id="WoV-la-XcQ"/>
+                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="30" id="X6R-f1-uwU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="30" id="cms-9H-POc"/>
+                            <constraint firstItem="9fY-qq-sL2" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="40" id="g7Y-sD-Yr1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9fY-qq-sL2" secondAttribute="trailing" constant="40" id="ixo-SS-W9L"/>
+                            <constraint firstItem="XhL-fQ-g95" firstAttribute="centerX" secondItem="9fY-qq-sL2" secondAttribute="centerX" id="nAO-NC-U1f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vnf-pE-H0X" secondAttribute="trailing" constant="20" id="qjs-hr-m1W"/>
+                            <constraint firstItem="vnf-pE-H0X" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="20" id="xXS-BU-AAg"/>
+                            <constraint firstItem="vnf-pE-H0X" firstAttribute="top" secondItem="SjR-SO-aq6" secondAttribute="bottom" constant="20" id="xmP-p6-aMC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="78h-TP-Ghg" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="VWm-Bc-t8i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gv-7n-OFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="78h-TP-Ghg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="1489"/>
+        </scene>
+        <!--sh8.email-->
+        <scene sceneID="vBs-Od-p0O">
+            <objects>
+                <viewController storyboardIdentifier="1" title="sh8.email" id="9XP-Hk-AxK" customClass="ViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5wZ-nA-oIc"/>
+                        <viewControllerLayoutGuide type="bottom" id="U2W-ic-yPT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GND-dH-ZRN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sh8.email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-IG-L31">
+                                <rect key="frame" x="55" y="55" width="304" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="pZH-cU-oq1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="82"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-VL-Dm1">
+                                <rect key="frame" x="55" y="155" width="304" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="jmh-M1-wHF"/>
+                                </constraints>
+                                <string key="text">세상에서 가장 조용한 이메일
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-F4-Rim" customClass="CustomTextField" customModule="sh8email" customModuleProvider="target">
+                                <rect key="frame" x="55" y="249" width="191" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aBK-xa-X4h"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="go"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@sh8.email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-9i-1tN">
+                                <rect key="frame" x="252" y="252" width="107" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="ApE-4T-jqW"/>
+                                    <constraint firstAttribute="height" constant="24" id="l67-8R-ach"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPH-cn-zAS">
+                                <rect key="frame" x="55" y="318" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.047058823529411764" green="0.48627450980392156" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7hM-GA-QpP"/>
+                                </constraints>
+                                <state key="normal" title="메일 확인">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkMailButtonTapped:" destination="9XP-Hk-AxK" eventType="touchUpInside" id="WM2-Bc-SX3"/>
+                                    <segue destination="crY-c0-Guk" kind="showDetail" action="showViewController:sender:" id="uyK-Nu-gFm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7no-o7-2tf">
+                                <rect key="frame" x="55" y="368" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="liK-Eb-Yq2"/>
+                                </constraints>
+                                <state key="normal" title="이게 뭐고, 어떻게 쓰는거죠?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eFN-Be-HAr" kind="show" id="e2h-e7-Xcm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rU5-F4-Rim" firstAttribute="top" secondItem="Qai-VL-Dm1" secondAttribute="bottom" constant="56" id="0sn-Ty-gXy"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="centerY" secondItem="rU5-F4-Rim" secondAttribute="centerY" id="83W-zm-eU2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qai-VL-Dm1" secondAttribute="trailing" constant="35" id="CLC-qh-Ghg"/>
+                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="top" secondItem="WOO-IG-L31" secondAttribute="bottom" constant="17" id="CM2-xB-L4Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NPH-cn-zAS" secondAttribute="trailing" constant="35" id="CbX-cS-s4P"/>
+                            <constraint firstItem="WOO-IG-L31" firstAttribute="top" secondItem="5wZ-nA-oIc" secondAttribute="bottom" constant="35" id="Q7M-nS-9DT"/>
+                            <constraint firstItem="Qai-VL-Dm1" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="Qds-bC-Zqg"/>
+                            <constraint firstItem="NPH-cn-zAS" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="V0B-OW-RmN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WOO-IG-L31" secondAttribute="trailing" constant="35" id="Vcc-x9-ztl"/>
+                            <constraint firstItem="7no-o7-2tf" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="f15-4s-HVL"/>
+                            <constraint firstItem="NPH-cn-zAS" firstAttribute="top" secondItem="LzW-9i-1tN" secondAttribute="bottom" constant="42" id="jbk-co-9lY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LzW-9i-1tN" secondAttribute="trailing" constant="35" id="lG4-dd-xmL"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" constant="6" id="mX2-7f-g8P"/>
+                            <constraint firstItem="WOO-IG-L31" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="oZU-26-geQ"/>
+                            <constraint firstItem="rU5-F4-Rim" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leadingMargin" constant="35" id="qJ0-aS-1Wu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7no-o7-2tf" secondAttribute="trailing" constant="35" id="r4Y-jz-l7L"/>
+                            <constraint firstItem="7no-o7-2tf" firstAttribute="top" secondItem="NPH-cn-zAS" secondAttribute="bottom" constant="20" id="yua-Hr-irS"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="checkEmailButton" destination="NPH-cn-zAS" id="SfX-qZ-kse"/>
+                        <outlet property="emailField" destination="rU5-F4-Rim" id="cRe-Tp-kUC"/>
+                        <outlet property="viewInstructionsButton" destination="7no-o7-2tf" id="bCx-hc-wkL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7J-US-CgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788.40579710144937" y="119.83695652173914"/>
+        </scene>
+        <!--sh8.email-->
+        <scene sceneID="WzB-9c-a1m">
+            <objects>
+                <tableViewController title="sh8.email" id="tFH-Mj-2xi" customClass="sh8mailTableViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="E2Y-SW-Ibu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sh8mailCell" rowHeight="151" id="P8G-wV-mgi" customClass="sh8mailTableViewCell" customModule="sh8email" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="151"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8G-wV-mgi" id="yVn-t0-Waz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
+                                            <rect key="frame" x="8" y="8" width="260" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="260" id="6ma-Wn-OX9"/>
+                                                <constraint firstAttribute="height" constant="21" id="Laf-vS-2kB"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-z8-8jW">
+                                            <rect key="frame" x="276" y="7.9999999999999982" width="130" height="19.333333333333329"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="vaf-CM-Yk0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILy-NJ-7t5">
+                                            <rect key="frame" x="8" y="35.333333333333336" width="398" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Au-q4-KKA">
+                                            <rect key="frame" x="8" y="64.333333333333343" width="398" height="84.333333333333343"/>
+                                            <string key="text">contents
+contents
+contents
+contents</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9Au-q4-KKA" firstAttribute="leading" secondItem="yVn-t0-Waz" secondAttribute="leadingMargin" id="4X5-04-sdL"/>
+                                        <constraint firstItem="9Au-q4-KKA" firstAttribute="bottom" secondItem="yVn-t0-Waz" secondAttribute="bottomMargin" constant="6.6666666666666572" id="GBb-HD-6Rk"/>
+                                        <constraint firstItem="ILy-NJ-7t5" firstAttribute="trailing" secondItem="yVn-t0-Waz" secondAttribute="trailingMargin" id="Hnc-6S-MYN"/>
+                                        <constraint firstItem="J2b-z8-8jW" firstAttribute="top" secondItem="yVn-t0-Waz" secondAttribute="topMargin" id="RGy-UA-tYi"/>
+                                        <constraint firstItem="oMn-ol-7aQ" firstAttribute="top" secondItem="yVn-t0-Waz" secondAttribute="topMargin" id="ajY-ar-3lZ"/>
+                                        <constraint firstItem="ILy-NJ-7t5" firstAttribute="leading" secondItem="yVn-t0-Waz" secondAttribute="leadingMargin" id="i6Z-31-9fc"/>
+                                        <constraint firstItem="9Au-q4-KKA" firstAttribute="trailing" secondItem="yVn-t0-Waz" secondAttribute="trailingMargin" id="lYL-sT-JsC"/>
+                                        <constraint firstItem="9Au-q4-KKA" firstAttribute="top" secondItem="ILy-NJ-7t5" secondAttribute="bottom" constant="8" id="pNP-1h-4do"/>
+                                        <constraint firstItem="oMn-ol-7aQ" firstAttribute="leading" secondItem="yVn-t0-Waz" secondAttribute="leadingMargin" id="sIb-aT-CpA"/>
+                                        <constraint firstItem="J2b-z8-8jW" firstAttribute="trailing" secondItem="yVn-t0-Waz" secondAttribute="trailingMargin" id="syw-hI-4xJ"/>
+                                        <constraint firstItem="ILy-NJ-7t5" firstAttribute="top" secondItem="J2b-z8-8jW" secondAttribute="bottom" constant="8" id="vQf-H0-qXf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentsLabel" destination="9Au-q4-KKA" id="2bw-xn-WI3"/>
+                                    <outlet property="recipDateLabel" destination="J2b-z8-8jW" id="are-J1-5N6"/>
+                                    <outlet property="senderLabel" destination="oMn-ol-7aQ" id="Ga1-sh-Mgl"/>
+                                    <outlet property="subjectLabel" destination="ILy-NJ-7t5" id="Ny2-kk-TWf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tFH-Mj-2xi" id="d90-YQ-Fhe"/>
+                            <outlet property="delegate" destination="tFH-Mj-2xi" id="BD0-lS-HFO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="sh8.email" id="Ovq-ui-Iki">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="GlZ-7V-geO"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="r2r-Os-BvP">
+                            <connections>
+                                <segue destination="PYq-TH-kmC" kind="unwind" unwindAction="unwindToMainWithSegue:" id="zZ7-hx-WWB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="fsE-Uh-u1t">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="tFH-Mj-2xi" id="WZe-Gl-JeG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rq-WB-1Vq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PYq-TH-kmC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="119.83695652173914"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQL-PQ-np9">
+            <objects>
+                <navigationController id="crY-c0-Guk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lw9-Qi-cRN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tFH-Mj-2xi" kind="relationship" relationship="rootViewController" id="Tsi-rZ-ai5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2E-Fd-ba6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="instructions1_image" width="686" height="884"/>
+    </resources>
+</document>
