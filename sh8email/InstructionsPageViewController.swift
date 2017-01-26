@@ -13,10 +13,10 @@ import UIKit
 class InstructionsPageViewController: UIPageViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		dataSource = self
+		self.dataSource = self
 		
 		if let firstViewController = orderedViewControllers.first {
-			setViewControllers([firstViewController],
+			self.setViewControllers([firstViewController],
 			                   direction: .forward,
 			                   animated: true,
 			                   completion: nil)
