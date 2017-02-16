@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
-import Kanna
 
 class Sh8mailTableViewController: UITableViewController {
     var model: Sh8model!
@@ -54,28 +53,7 @@ class Sh8mailTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    func convertDate(_ dateStr: String) -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
-        guard let date = dateFormatter.date(from: dateStr) else {
-            return dateStr
-        }
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
-        let timeStamp = dateFormatter.string(from: date)
-        return timeStamp
-    }
-    
-    func convertHtml(_ str: String) -> String{
-        if let doc = HTML(html: str, encoding: .utf8){
-            return doc.content!
-        }else{
-            return str
-        }
-    }
+	
 }
 
 // MARK: - Table view data source
@@ -96,9 +74,9 @@ extension Sh8mailTableViewController{
         let mail = model.emails[indexPath.row]
         
         cell.senderLabel.text = mail.sender
-        cell.recipDateLabel.text = self.convertDate(mail.recipDate!)
+        cell.recipDateLabel.text = Sh8helper.convertDate(mail.recipDate!)
         cell.subjectLabel.text = mail.subject
-        cell.contentsLabel.text = self.convertHtml(mail.contents!)
+        cell.contentsLabel.text = Sh8helper.convertHtml(mail.contents!)
         
         return cell
     }
