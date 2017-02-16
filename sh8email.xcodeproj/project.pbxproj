@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3530BFE81E5570060031816F /* sh8helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE71E5570060031816F /* sh8helper.swift */; };
+		3530BFEA1E557A480031816F /* sh8error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE91E557A480031816F /* sh8error.swift */; };
 		357D91931E32321500BC206B /* Sh8mailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357D91921E32321500BC206B /* Sh8mailTableViewController.swift */; };
 		3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598DEB81E2DF42600CF5764 /* Sh8model.swift */; };
 		35D5A5121E1F367B002CE4BD /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */; };
@@ -47,6 +48,7 @@
 		13966BBE424ABF97B78D533D /* Pods_sh8email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sh8email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CC55C304869ECB78E75E8D /* Pods-sh8email.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sh8email.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sh8email/Pods-sh8email.debug.xcconfig"; sourceTree = "<group>"; };
 		3530BFE71E5570060031816F /* sh8helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8helper.swift; sourceTree = "<group>"; };
+		3530BFE91E557A480031816F /* sh8error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8error.swift; sourceTree = "<group>"; };
 		357D91921E32321500BC206B /* Sh8mailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8mailTableViewController.swift; sourceTree = "<group>"; };
 		3598DEB81E2DF42600CF5764 /* Sh8model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8model.swift; sourceTree = "<group>"; };
 		35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,8 @@
 		6EB8C1271E39700900C863C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3530BFE71E5570060031816F /* sh8helper.swift */,
+				3530BFE91E557A480031816F /* sh8error.swift */,
 				626FD9501D8AC1F100E6F41E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -210,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				62300D791D99676F00725805 /* CustomTextField.swift */,
-				3530BFE71E5570060031816F /* sh8helper.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */,
 				3530BFE81E5570060031816F /* sh8helper.swift in Sources */,
 				35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */,
+				3530BFEA1E557A480031816F /* sh8error.swift in Sources */,
 				62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */,
 				357D91931E32321500BC206B /* Sh8mailTableViewController.swift in Sources */,
 				623447E51D979EEC0000A086 /* Mail.swift in Sources */,
