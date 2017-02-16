@@ -290,7 +290,6 @@ sh8.email은 가입없이 아무 계정으로
                                 </state>
                                 <connections>
                                     <action selector="checkMailButtonTapped:" destination="9XP-Hk-AxK" eventType="touchUpInside" id="WM2-Bc-SX3"/>
-                                    <segue destination="crY-c0-Guk" kind="showDetail" action="showViewController:sender:" id="uyK-Nu-gFm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7no-o7-2tf">
@@ -333,6 +332,7 @@ sh8.email은 가입없이 아무 계정으로
                         <outlet property="checkEmailButton" destination="NPH-cn-zAS" id="SfX-qZ-kse"/>
                         <outlet property="emailField" destination="rU5-F4-Rim" id="cRe-Tp-kUC"/>
                         <outlet property="viewInstructionsButton" destination="7no-o7-2tf" id="bCx-hc-wkL"/>
+                        <segue destination="crY-c0-Guk" kind="show" identifier="showDetail" id="h8z-a0-Q48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7J-US-CgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,11 +342,13 @@ sh8.email은 가입없이 아무 계정으로
         <!--sh8.email-->
         <scene sceneID="WzB-9c-a1m">
             <objects>
-                <tableViewController title="sh8.email" id="tFH-Mj-2xi" customClass="sh8mailTableViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="E2Y-SW-Ibu">
+                <tableViewController title="sh8.email" id="tFH-Mj-2xi" customClass="Sh8mailTableViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="E2Y-SW-Ibu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sh8mailCell" rowHeight="151" id="P8G-wV-mgi" customClass="sh8mailTableViewCell" customModule="sh8email" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="151"/>
@@ -355,20 +357,19 @@ sh8.email은 가입없이 아무 계정으로
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
-                                            <rect key="frame" x="8" y="8" width="260" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
+                                            <rect key="frame" x="8" y="8" width="313" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="260" id="6ma-Wn-OX9"/>
                                                 <constraint firstAttribute="height" constant="21" id="Laf-vS-2kB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-z8-8jW">
-                                            <rect key="frame" x="276" y="7.9999999999999982" width="130" height="19.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-z8-8jW">
+                                            <rect key="frame" x="326" y="7.9999999999999982" width="80" height="19.333333333333329"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="vaf-CM-Yk0"/>
+                                                <constraint firstAttribute="width" constant="80" id="JbQ-aV-h2R"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <nil key="textColor"/>
@@ -403,6 +404,7 @@ contents</string>
                                         <constraint firstItem="oMn-ol-7aQ" firstAttribute="leading" secondItem="yVn-t0-Waz" secondAttribute="leadingMargin" id="sIb-aT-CpA"/>
                                         <constraint firstItem="J2b-z8-8jW" firstAttribute="trailing" secondItem="yVn-t0-Waz" secondAttribute="trailingMargin" id="syw-hI-4xJ"/>
                                         <constraint firstItem="ILy-NJ-7t5" firstAttribute="top" secondItem="J2b-z8-8jW" secondAttribute="bottom" constant="8" id="vQf-H0-qXf"/>
+                                        <constraint firstItem="J2b-z8-8jW" firstAttribute="leading" secondItem="oMn-ol-7aQ" secondAttribute="trailing" constant="5" id="zp8-jw-dyE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

@@ -36,9 +36,20 @@ class ViewController: UIViewController {
 			alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
 			self.present(alert, animated: true, completion: nil)
 		} else {
-			Sh8model.model.setUsername(as: username)
+            self.performSegue(withIdentifier: "showDetail", sender: nil)
 		}
-
 	}
+    
+    
+    // MARK: Prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navVC = segue.destination as? UINavigationController{
+            if let vc = navVC.visibleViewController as? Sh8mailTableViewController{
+                let sh8model = Sh8model()
+                sh8model.setUsername(as: emailField.text!)
+                vc.model = sh8model
+            }
+        }
+    }
 }
 
