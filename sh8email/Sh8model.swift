@@ -15,13 +15,15 @@ class Sh8model {
 	var username: String?
 	var emails = [Mail]()
 	
+	/**
+		sets current sh8model's username
+	*/
 	func setUsername(as username: String) {
 		self.username = username
 	}
 	
 	/**
-		checks sh8.email of given username and puts mail into emails list
-		- parameter username: the username to check sh8.email of
+		checks sh8.email of current username and puts mail into emails list
 	*/
 	func checkMail() {
 		// call json
