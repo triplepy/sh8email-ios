@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 			alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
 			self.present(alert, animated: true, completion: nil)
 		} else {
-            self.performSegue(withIdentifier: "showDetail", sender: nil)
+            self.performSegue(withIdentifier: "showEmailTableView", sender: nil)
 		}
 	}
     

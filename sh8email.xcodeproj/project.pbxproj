@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35282D391E63F9A200C628C4 /* Sh8mailDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35282D381E63F9A200C628C4 /* Sh8mailDetailViewController.swift */; };
 		3530BFE81E5570060031816F /* sh8helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE71E5570060031816F /* sh8helper.swift */; };
 		3530BFEA1E557A480031816F /* sh8error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE91E557A480031816F /* sh8error.swift */; };
 		357D91931E32321500BC206B /* Sh8mailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357D91921E32321500BC206B /* Sh8mailTableViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		13966BBE424ABF97B78D533D /* Pods_sh8email.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sh8email.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CC55C304869ECB78E75E8D /* Pods-sh8email.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sh8email.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sh8email/Pods-sh8email.debug.xcconfig"; sourceTree = "<group>"; };
+		35282D381E63F9A200C628C4 /* Sh8mailDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8mailDetailViewController.swift; sourceTree = "<group>"; };
 		3530BFE71E5570060031816F /* sh8helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8helper.swift; sourceTree = "<group>"; };
 		3530BFE91E557A480031816F /* sh8error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8error.swift; sourceTree = "<group>"; };
 		357D91921E32321500BC206B /* Sh8mailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8mailTableViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				626FD9461D8AC1F100E6F41E /* ViewController.swift */,
 				357D91921E32321500BC206B /* Sh8mailTableViewController.swift */,
+				35282D381E63F9A200C628C4 /* Sh8mailDetailViewController.swift */,
 				35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */,
 				35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */,
 			);
@@ -422,6 +425,7 @@
 				3530BFE81E5570060031816F /* sh8helper.swift in Sources */,
 				35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */,
 				3530BFEA1E557A480031816F /* sh8error.swift in Sources */,
+				35282D391E63F9A200C628C4 /* Sh8mailDetailViewController.swift in Sources */,
 				62300D7A1D99676F00725805 /* CustomTextField.swift in Sources */,
 				357D91931E32321500BC206B /* Sh8mailTableViewController.swift in Sources */,
 				623447E51D979EEC0000A086 /* Mail.swift in Sources */,
@@ -580,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 25CC55C304869ECB78E75E8D /* Pods-sh8email.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C579B8B4M9;
 				INFOPLIST_FILE = sh8email/info.plist;
@@ -596,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69DB4C3142818023442DEB5D /* Pods-sh8email.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C579B8B4M9;
 				INFOPLIST_FILE = sh8email/info.plist;

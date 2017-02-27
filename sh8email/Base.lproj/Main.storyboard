@@ -332,7 +332,7 @@ sh8.email은 가입없이 아무 계정으로
                         <outlet property="checkEmailButton" destination="NPH-cn-zAS" id="SfX-qZ-kse"/>
                         <outlet property="emailField" destination="rU5-F4-Rim" id="cRe-Tp-kUC"/>
                         <outlet property="viewInstructionsButton" destination="7no-o7-2tf" id="bCx-hc-wkL"/>
-                        <segue destination="crY-c0-Guk" kind="show" identifier="showDetail" id="h8z-a0-Q48"/>
+                        <segue destination="crY-c0-Guk" kind="show" identifier="showEmailTableView" id="h8z-a0-Q48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7J-US-CgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,7 +354,7 @@ sh8.email은 가입없이 아무 계정으로
                                 <rect key="frame" x="0.0" y="28" width="414" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8G-wV-mgi" id="yVn-t0-Waz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
@@ -412,6 +412,7 @@ contents</string>
                                     <outlet property="recipDateLabel" destination="J2b-z8-8jW" id="are-J1-5N6"/>
                                     <outlet property="senderLabel" destination="oMn-ol-7aQ" id="Ga1-sh-Mgl"/>
                                     <outlet property="subjectLabel" destination="ILy-NJ-7t5" id="Ny2-kk-TWf"/>
+                                    <segue destination="O9j-FE-tTH" kind="show" identifier="showEmail" id="kDE-08-dlS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -421,7 +422,6 @@ contents</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="sh8.email" id="Ovq-ui-Iki">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="GlZ-7V-geO"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="r2r-Os-BvP">
                             <connections>
                                 <segue destination="PYq-TH-kmC" kind="unwind" unwindAction="unwindToMainWithSegue:" id="zZ7-hx-WWB"/>
@@ -438,6 +438,25 @@ contents</string>
                 <exit id="PYq-TH-kmC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="744.92753623188412" y="119.83695652173914"/>
+        </scene>
+        <!--sh8.email-->
+        <scene sceneID="6LS-Uj-uof">
+            <objects>
+                <viewController id="O9j-FE-tTH" customClass="Sh8mailDetailViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GGP-Cs-1Ff"/>
+                        <viewControllerLayoutGuide type="bottom" id="qBh-za-qna"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UNL-aO-nmW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="sh8.email" id="D0Q-Rf-sOu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXN-vX-8d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1612" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fQL-PQ-np9">
