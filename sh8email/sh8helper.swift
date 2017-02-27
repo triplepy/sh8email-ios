@@ -28,7 +28,9 @@ class Sh8helper {
 		dateFormatter.timeStyle = .short
 		dateFormatter.doesRelativeDateFormatting = true
 		let timeStamp = dateFormatter.string(from: date)
-		print(timeStamp)
+		#if DEBUG
+			print(timeStamp)
+		#endif
 		return timeStamp
 	}
 
@@ -38,7 +40,7 @@ class Sh8helper {
 		- returns: the extracted content
 	*/
 	static func convertHtml(_ str: String) -> String {
-		if let doc = HTML(html: str, encoding: .utf8){
+		if let doc = HTML(html: str, encoding: .utf8) {
 			return doc.content!
 		} else {
 			return str
