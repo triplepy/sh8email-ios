@@ -18,8 +18,9 @@ class Sh8mailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		print("<SYSTEM> Checking email for \(username)...")
-		
-        // Uncomment the following line to preserve selection between presentations
+		self.checkEmail()
+
+		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -35,17 +36,26 @@ class Sh8mailTableViewController: UITableViewController {
 		let sh8emailRequestURL = "https://sh8.email/rest/mail/\(username!)/list/"
 		Alamofire.request(sh8emailRequestURL).responseArray { (response: DataResponse<[Mail]>) in
 			self.emails = []
-			let mailArray = response.result.value
-            guard let mailArray = response.result.value
-			// if mail exists in mailbox, put them in current mail list
-			if let mailArray = mailArray {
-				for mail in mailArray {
-                    self.emails.append(mail)
-					print(mail.description)
-				}
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+			guard let mailArray = response.result.value else {
+				print("< ERR! > Did not receive data for username \"\(self.username!)\"")
+				return
+			}
+			
+			if mailArray.count == 0 {
+				let alert = UIAlertController(title: "\(self.username!)@sh8.email", message: "수신된 메일이 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
+				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+				self.present(alert, animated: true, completion: nil)
+			}
+
+			print("<SYSTEM> Received data for username \"\(self.username!)\"")
+			for mail in mailArray {
+				self.emails.append(mail)
+				
+				print(mail.description)
+			}
+			
+			DispatchQueue.main.async {
+				self.tableView.reloadData()
 			}
 		}
 	}
@@ -58,7 +68,7 @@ class Sh8mailTableViewController: UITableViewController {
 }
 
 // MARK: - Table view data source
-extension Sh8mailTableViewController{
+extension Sh8mailTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
