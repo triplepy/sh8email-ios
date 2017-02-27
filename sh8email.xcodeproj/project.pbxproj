@@ -10,7 +10,6 @@
 		3530BFE81E5570060031816F /* sh8helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE71E5570060031816F /* sh8helper.swift */; };
 		3530BFEA1E557A480031816F /* sh8error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530BFE91E557A480031816F /* sh8error.swift */; };
 		357D91931E32321500BC206B /* Sh8mailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357D91921E32321500BC206B /* Sh8mailTableViewController.swift */; };
-		3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598DEB81E2DF42600CF5764 /* Sh8model.swift */; };
 		35D5A5121E1F367B002CE4BD /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */; };
 		35F6A54E1E337625006B7420 /* sh8mailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F6A54D1E337625006B7420 /* sh8mailTableViewCell.swift */; };
 		35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */; };
@@ -50,7 +49,6 @@
 		3530BFE71E5570060031816F /* sh8helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8helper.swift; sourceTree = "<group>"; };
 		3530BFE91E557A480031816F /* sh8error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8error.swift; sourceTree = "<group>"; };
 		357D91921E32321500BC206B /* Sh8mailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8mailTableViewController.swift; sourceTree = "<group>"; };
-		3598DEB81E2DF42600CF5764 /* Sh8model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sh8model.swift; sourceTree = "<group>"; };
 		35D5A5111E1F367A002CE4BD /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		35F6A54D1E337625006B7420 /* sh8mailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sh8mailTableViewCell.swift; sourceTree = "<group>"; };
 		35F828461E1E328B0098D3C7 /* InstructionsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsPageViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				623447E41D979EEC0000A086 /* Mail.swift */,
-				3598DEB81E2DF42600CF5764 /* Sh8model.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -422,7 +419,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3598DEB91E2DF42600CF5764 /* Sh8model.swift in Sources */,
 				3530BFE81E5570060031816F /* sh8helper.swift in Sources */,
 				35F828471E1E328B0098D3C7 /* InstructionsPageViewController.swift in Sources */,
 				3530BFEA1E557A480031816F /* sh8error.swift in Sources */,

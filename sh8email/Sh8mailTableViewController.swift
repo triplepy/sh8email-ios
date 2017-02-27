@@ -12,13 +12,13 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class Sh8mailTableViewController: UITableViewController {
-    var model: Sh8model!
+	var username: String?
+	var emails: [Mail] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.checkEmail()
-        print(model.emails.count)
-        
+		print("<SYSTEM> Checking email for \(username)...")
+		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -31,15 +31,16 @@ class Sh8mailTableViewController: UITableViewController {
 	}
 	
 	func checkEmail() {
-        self.model.emails = []
-		let sh8emailRequestURL = "https://sh8.email/rest/mail/\(model.username!)/list/"
+        self.emails = []
+		let sh8emailRequestURL = "https://sh8.email/rest/mail/\(username!)/list/"
 		Alamofire.request(sh8emailRequestURL).responseArray { (response: DataResponse<[Mail]>) in
+			self.emails = []
 			let mailArray = response.result.value
-            
+            guard let mailArray = response.result.value
 			// if mail exists in mailbox, put them in current mail list
 			if let mailArray = mailArray {
 				for mail in mailArray {
-                    self.model.emails.append(mail)
+                    self.emails.append(mail)
 					print(mail.description)
 				}
                 DispatchQueue.main.async {
@@ -64,14 +65,14 @@ extension Sh8mailTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.emails.count
+        return emails.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sh8mailCell", for: indexPath) as! sh8mailTableViewCell
         
-        let mail = model.emails[indexPath.row]
+        let mail = emails[indexPath.row]
         
         cell.senderLabel.text = mail.sender
         cell.recipDateLabel.text = Sh8helper.convertDate(mail.recipDate!)
@@ -83,7 +84,7 @@ extension Sh8mailTableViewController{
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row: \(indexPath.row),  sender: \(self.model.emails[indexPath.row].sender)")
+        print("Selected row: \(indexPath.row),  sender: \(self.emails[indexPath.row].sender)")
     }
     
     /*

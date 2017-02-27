@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireObjectMapper
 
 class ViewController: UIViewController {
+	var username: String?
 	
 	// MARK: Outlets
 	@IBOutlet var emailField: CustomTextField!
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     
     // MARK: Actions
 	@IBAction func checkMailButtonTapped(_ sender: Any) {
-		let username = emailField.text!
+		username = emailField.text!
 		if (username == "") {
 			let alert = UIAlertController(title: "Error!", message: "이메일 주소를 입력해주세요.", preferredStyle: UIAlertControllerStyle.alert)
 			alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
@@ -40,14 +41,11 @@ class ViewController: UIViewController {
 		}
 	}
     
-    
     // MARK: Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? UINavigationController{
             if let vc = navVC.visibleViewController as? Sh8mailTableViewController{
-                let sh8model = Sh8model()
-                sh8model.setUsername(as: emailField.text!)
-                vc.model = sh8model
+                vc.username = username
             }
         }
     }
