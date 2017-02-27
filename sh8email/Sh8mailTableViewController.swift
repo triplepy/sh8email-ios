@@ -132,13 +132,24 @@ extension Sh8mailTableViewController {
      }
      */
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+		if segue.identifier == "showEmail" {
+			let nextScene = segue.destination as! Sh8mailDetailViewController
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				let email = emails[indexPath.row]
+				nextScene.email = email
+				
+				// setup back button http://stackoverflow.com/questions/28471164/how-to-set-back-button-text-in-swift
+				let backItem = UIBarButtonItem()
+				backItem.title = "Back"
+				navigationItem.backBarButtonItem = backItem
+				print("passing data")
+				print(emails[indexPath.row])
+
+			}
+		}
+	}
 }
