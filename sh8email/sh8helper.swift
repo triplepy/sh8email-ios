@@ -41,6 +41,9 @@ class Sh8helper {
 	*/
 	static func convertHtml(_ str: String) -> String {
 		if let doc = HTML(html: str, encoding: .utf8) {
+			guard let txt = doc.text else {
+				return str
+			}
 			return doc.text!
 		} else {
 			return str
