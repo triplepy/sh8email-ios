@@ -450,13 +450,61 @@ contents</string>
                     <view key="view" contentMode="scaleToFill" id="UNL-aO-nmW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-qE-UU4">
+                                <rect key="frame" x="20" y="72" width="374" height="57"/>
+                                <string key="text" base64-UTF8="YES">
+IAogA
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cvz-mU-fAr">
+                                <rect key="frame" x="20" y="137" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzS-Ta-bU8">
+                                <rect key="frame" x="20" y="196" width="374" height="532"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-0J-gAK">
+                                <rect key="frame" x="20" y="163" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="top" secondItem="9jJ-0J-gAK" secondAttribute="bottom" constant="16" id="1Mo-ge-KC7"/>
+                            <constraint firstItem="mdT-qE-UU4" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="1Vs-wY-9Op"/>
+                            <constraint firstItem="cvz-mU-fAr" firstAttribute="top" secondItem="mdT-qE-UU4" secondAttribute="bottom" constant="7.6666666666666572" id="Ceb-qN-vZT"/>
+                            <constraint firstItem="9jJ-0J-gAK" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" id="IdG-oY-7Lb"/>
+                            <constraint firstItem="9jJ-0J-gAK" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="Prb-y4-uFx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mdT-qE-UU4" secondAttribute="trailing" id="eif-Uf-AKD"/>
+                            <constraint firstItem="9jJ-0J-gAK" firstAttribute="top" secondItem="cvz-mU-fAr" secondAttribute="bottom" constant="9" id="jx1-ox-VCx"/>
+                            <constraint firstItem="mdT-qE-UU4" firstAttribute="top" secondItem="GGP-Cs-1Ff" secondAttribute="bottom" constant="8" id="nT0-aC-qx8"/>
+                            <constraint firstItem="qBh-za-qna" firstAttribute="top" secondItem="kzS-Ta-bU8" secondAttribute="bottom" constant="8" id="pRO-m1-RMP"/>
+                            <constraint firstItem="cvz-mU-fAr" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" id="qlw-XY-gDi"/>
+                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" id="twI-Yv-u6s"/>
+                            <constraint firstItem="cvz-mU-fAr" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="xgG-qg-MEg"/>
+                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="ywO-cy-SmE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="sh8.email" id="D0Q-Rf-sOu"/>
+                    <connections>
+                        <outlet property="contentView" destination="kzS-Ta-bU8" id="ruP-eC-L4L"/>
+                        <outlet property="recipDateLabel" destination="9jJ-0J-gAK" id="hjV-vs-FJK"/>
+                        <outlet property="senderLabel" destination="cvz-mU-fAr" id="EUK-WL-85P"/>
+                        <outlet property="subjectLabel" destination="mdT-qE-UU4" id="b1h-pM-JPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXN-vX-8d1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="119"/>
+            <point key="canvasLocation" x="1611.5942028985507" y="118.20652173913044"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fQL-PQ-np9">
