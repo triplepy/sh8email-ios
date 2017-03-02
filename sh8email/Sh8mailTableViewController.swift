@@ -15,10 +15,13 @@ class Sh8mailTableViewController: UITableViewController {
 	var username: String?
 	var emails: [Mail] = []
 
+	override func viewWillAppear(_ animated: Bool) {
+		self.checkEmail()
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		print("<SYSTEM> Checking email for \(username)...")
-		self.checkEmail()
 
 		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
