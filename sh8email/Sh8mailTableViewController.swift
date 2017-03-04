@@ -10,17 +10,20 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
-import Kanna
 
 class Sh8mailTableViewController: UITableViewController {
-    var model: Sh8model!
+	var username: String?
+	var emails: [Mail] = []
 
+	override func viewWillAppear(_ animated: Bool) {
+		self.checkEmail()
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.checkEmail()
-        print(model.emails.count)
-        
-        // Uncomment the following line to preserve selection between presentations
+		print("<SYSTEM> Checking email for \(username)...")
+
+		// Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -32,20 +35,30 @@ class Sh8mailTableViewController: UITableViewController {
 	}
 	
 	func checkEmail() {
-        self.model.emails = []
-		let sh8emailRequestURL = "https://sh8.email/rest/mail/\(model.username!)/list/"
+        self.emails = []
+		let sh8emailRequestURL = "https://sh8.email/rest/mail/\(username!)/list/"
 		Alamofire.request(sh8emailRequestURL).responseArray { (response: DataResponse<[Mail]>) in
-			let mailArray = response.result.value
-            
-			// if mail exists in mailbox, put them in current mail list
-			if let mailArray = mailArray {
-				for mail in mailArray {
-                    self.model.emails.append(mail)
-					print(mail.description)
-				}
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+			self.emails = []
+			guard let mailArray = response.result.value else {
+				print("< ERR! > Did not receive data for username \"\(self.username!)\"")
+				return
+			}
+			
+			if mailArray.count == 0 {
+				let alert = UIAlertController(title: "\(self.username!)@sh8.email", message: "수신된 메일이 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
+				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+				self.present(alert, animated: true, completion: nil)
+			}
+
+			print("<SYSTEM> Received data for username \"\(self.username!)\"")
+			for mail in mailArray {
+				self.emails.append(mail)
+				
+				print(mail.description)
+			}
+			
+			DispatchQueue.main.async {
+				self.tableView.reloadData()
 			}
 		}
 	}
@@ -54,58 +67,37 @@ class Sh8mailTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    func convertDate(_ dateStr: String) -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
-        guard let date = dateFormatter.date(from: dateStr) else {
-            return dateStr
-        }
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
-        let timeStamp = dateFormatter.string(from: date)
-        return timeStamp
-    }
-    
-    func convertHtml(_ str: String) -> String{
-        if let doc = HTML(html: str, encoding: .utf8){
-            return doc.content!
-        }else{
-            return str
-        }
-    }
+	
 }
 
 // MARK: - Table view data source
-extension Sh8mailTableViewController{
+extension Sh8mailTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.emails.count
+        return emails.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sh8mailCell", for: indexPath) as! sh8mailTableViewCell
         
-        let mail = model.emails[indexPath.row]
+        let mail = emails[indexPath.row]
         
         cell.senderLabel.text = mail.sender
-        cell.recipDateLabel.text = self.convertDate(mail.recipDate!)
+        cell.recipDateLabel.text = Sh8helper.convertDate(mail.recipDate!)
         cell.subjectLabel.text = mail.subject
-        cell.contentsLabel.text = self.convertHtml(mail.contents!)
+        cell.contentsLabel.text = Sh8helper.convertHtml(mail.contents!)
         
         return cell
     }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row: \(indexPath.row),  sender: \(self.model.emails[indexPath.row].sender)")
+        print("Selected row: \(indexPath.row),  sender: \(self.emails[indexPath.row].sender)")
     }
     
     /*
@@ -143,13 +135,24 @@ extension Sh8mailTableViewController{
      }
      */
     
-    /*
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+		if segue.identifier == "showEmail" {
+			let nextScene = segue.destination as! Sh8mailDetailViewController
+			if let indexPath = self.tableView.indexPathForSelectedRow {
+				let email = emails[indexPath.row]
+				nextScene.email = email
+				
+				// setup back button http://stackoverflow.com/questions/28471164/how-to-set-back-button-text-in-swift
+				let backItem = UIBarButtonItem()
+				backItem.title = "Back"
+				navigationItem.backBarButtonItem = backItem
+				print("passing data")
+				print(emails[indexPath.row])
+
+			}
+		}
+	}
 }
