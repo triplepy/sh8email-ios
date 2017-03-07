@@ -149,7 +149,7 @@ extension Sh8mailTableViewController {
 				let backItem = UIBarButtonItem()
 				backItem.title = "Back"
 				navigationItem.backBarButtonItem = backItem
-				print("passing data")
+				navigationItem.title = "\(username!)@sh8.email"
 				print(emails[indexPath.row])
 
 			}

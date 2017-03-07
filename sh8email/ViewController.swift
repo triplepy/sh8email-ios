@@ -46,6 +46,7 @@ class ViewController: UIViewController {
         if let navVC = segue.destination as? UINavigationController{
             if let vc = navVC.visibleViewController as? Sh8mailTableViewController{
                 vc.username = username
+				vc.navigationItem.title = "\(username!)@sh8.email"
             }
         }
     }
