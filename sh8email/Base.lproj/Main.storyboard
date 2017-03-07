@@ -268,6 +268,9 @@ sh8.email은 가입없이 아무 계정으로
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="usernameEntered:" destination="9XP-Hk-AxK" eventType="editingDidEndOnExit" id="8Zp-on-XLW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@sh8.email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzW-9i-1tN">
                                 <rect key="frame" x="252" y="252" width="107" height="24"/>
@@ -354,7 +357,7 @@ sh8.email은 가입없이 아무 계정으로
                                 <rect key="frame" x="0.0" y="28" width="414" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8G-wV-mgi" id="yVn-t0-Waz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
@@ -367,7 +370,7 @@ sh8.email은 가입없이 아무 계정으로
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipDate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J2b-z8-8jW">
-                                            <rect key="frame" x="326" y="7.9999999999999982" width="80" height="19.333333333333329"/>
+                                            <rect key="frame" x="326" y="8.0000000000000018" width="80" height="19.666666666666671"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="JbQ-aV-h2R"/>
                                             </constraints>
@@ -376,13 +379,13 @@ sh8.email은 가입없이 아무 계정으로
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subject" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILy-NJ-7t5">
-                                            <rect key="frame" x="8" y="35.333333333333336" width="398" height="21"/>
+                                            <rect key="frame" x="8" y="35.666666666666664" width="398" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Au-q4-KKA">
-                                            <rect key="frame" x="8" y="64.333333333333343" width="398" height="84.333333333333343"/>
+                                            <rect key="frame" x="8" y="64.666666666666657" width="398" height="83.999999999999972"/>
                                             <string key="text">contents
 contents
 contents
@@ -422,24 +425,23 @@ contents</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="sh8.email" id="Ovq-ui-Iki">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="r2r-Os-BvP">
-                            <connections>
-                                <segue destination="PYq-TH-kmC" kind="unwind" unwindAction="unwindToMainWithSegue:" id="zZ7-hx-WWB"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="r2r-Os-BvP"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="fsE-Uh-u1t">
                             <connections>
                                 <action selector="refreshButtonTapped:" destination="tFH-Mj-2xi" id="WZe-Gl-JeG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="PYq-TH-kmC" kind="unwind" identifier="noEmailReturnUnwindSegue" unwindAction="unwindToMainViewWithSegue:" id="vyC-RZ-1fV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rq-WB-1Vq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="PYq-TH-kmC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="744.92753623188412" y="119.83695652173914"/>
         </scene>
-        <!--sh8.email-->
+        <!--Sh 8mail Detail View Controller-->
         <scene sceneID="6LS-Uj-uof">
             <objects>
                 <viewController id="O9j-FE-tTH" customClass="Sh8mailDetailViewController" customModule="sh8email" customModuleProvider="target" sceneMemberID="viewController">
@@ -466,8 +468,8 @@ IAogA
                                 <color key="textColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzS-Ta-bU8">
-                                <rect key="frame" x="20" y="196" width="374" height="532"/>
+                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzS-Ta-bU8">
+                                <rect key="frame" x="0.0" y="196" width="414" height="540"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="9jJ-0J-gAK">
@@ -487,14 +489,16 @@ IAogA
                             <constraint firstAttribute="trailingMargin" secondItem="mdT-qE-UU4" secondAttribute="trailing" id="eif-Uf-AKD"/>
                             <constraint firstItem="9jJ-0J-gAK" firstAttribute="top" secondItem="cvz-mU-fAr" secondAttribute="bottom" constant="9" id="jx1-ox-VCx"/>
                             <constraint firstItem="mdT-qE-UU4" firstAttribute="top" secondItem="GGP-Cs-1Ff" secondAttribute="bottom" constant="8" id="nT0-aC-qx8"/>
-                            <constraint firstItem="qBh-za-qna" firstAttribute="top" secondItem="kzS-Ta-bU8" secondAttribute="bottom" constant="8" id="pRO-m1-RMP"/>
+                            <constraint firstItem="qBh-za-qna" firstAttribute="top" secondItem="kzS-Ta-bU8" secondAttribute="bottom" id="pRO-m1-RMP"/>
                             <constraint firstItem="cvz-mU-fAr" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" id="qlw-XY-gDi"/>
-                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" id="twI-Yv-u6s"/>
+                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="trailing" secondItem="UNL-aO-nmW" secondAttribute="trailingMargin" constant="20" id="twI-Yv-u6s"/>
                             <constraint firstItem="cvz-mU-fAr" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="xgG-qg-MEg"/>
-                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" id="ywO-cy-SmE"/>
+                            <constraint firstItem="kzS-Ta-bU8" firstAttribute="leading" secondItem="UNL-aO-nmW" secondAttribute="leadingMargin" constant="-20" id="ywO-cy-SmE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="sh8.email" id="D0Q-Rf-sOu"/>
+                    <navigationItem key="navigationItem" id="D0Q-Rf-sOu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Ek4-cc-wbc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="kzS-Ta-bU8" id="ruP-eC-L4L"/>
                         <outlet property="recipDateLabel" destination="9jJ-0J-gAK" id="hjV-vs-FJK"/>
@@ -525,5 +529,6 @@ IAogA
     </scenes>
     <resources>
         <image name="instructions1_image" width="686" height="884"/>
+        <image name="instructions2_image" width="686" height="734"/>
     </resources>
 </document>

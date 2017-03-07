@@ -46,7 +46,9 @@ class Sh8mailTableViewController: UITableViewController {
 			
 			if mailArray.count == 0 {
 				let alert = UIAlertController(title: "\(self.username!)@sh8.email", message: "수신된 메일이 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
-				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+					self.performSegue(withIdentifier: "noEmailReturnUnwindSegue", sender: self)
+				}))
 				self.present(alert, animated: true, completion: nil)
 			}
 

@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	@IBAction func usernameEntered(_ sender: Any) {
+		checkMailButtonTapped(self)
+	}
     
     // MARK: Actions
 	@IBAction func checkMailButtonTapped(_ sender: Any) {
@@ -50,5 +54,9 @@ class ViewController: UIViewController {
             }
         }
     }
+	
+	@IBAction func unwindToMainView(segue: UIStoryboardSegue) {
+		
+	}
 }
 
