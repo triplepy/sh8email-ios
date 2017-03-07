@@ -35,7 +35,7 @@ class Sh8mailDetailViewController: UIViewController {
 		if (email.isSecret!) {
 			// show UIAlert for password
 			var inputTextField: UITextField?
-			let passwordPrompt = UIAlertController(title: "Enter Password", message: "You have selected to enter your password.", preferredStyle: UIAlertControllerStyle.alert)
+			let passwordPrompt = UIAlertController(title: "Encrypted Email", message: "Please enter the password to the email", preferredStyle: UIAlertControllerStyle.alert)
 			passwordPrompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action) -> Void in
 				// go up one segue
 				
