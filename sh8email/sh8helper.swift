@@ -49,4 +49,11 @@ class Sh8helper {
 			return str
 		}
 	}
+    
+    static func changeButtonBorder(button: UIButton, radius: CGFloat, width : CGFloat, color: UIColor){
+        button.layer.cornerRadius = radius
+        button.layer.borderWidth = width
+        button.layer.borderColor = color.cgColor
+    }
+    
 }

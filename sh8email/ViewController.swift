@@ -22,8 +22,23 @@ class ViewController: UIViewController {
 	// MARK: VIEW
     override func viewDidLoad() {
         super.viewDidLoad()
+        Sh8helper.changeButtonBorder(button: self.checkEmailButton, radius: 3, width : 1, color: UIColor.clear)
+        Sh8helper.changeButtonBorder(button: self.viewInstructionsButton, radius: 3, width : 1, color: UIColor.clear)
 	}
 	
+    override func viewDidLayoutSubviews(){
+        super.viewDidLayoutSubviews()
+        
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.white.cgColor
+        border.frame = CGRect(x: 0, y: emailField.frame.size.height - width, width:  emailField.frame.size.width, height: emailField.frame.size.height)
+        
+        border.borderWidth = width
+        emailField.layer.addSublayer(border)
+        emailField.layer.masksToBounds = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,6 +63,10 @@ class ViewController: UIViewController {
                 vc.username = username
             }
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
