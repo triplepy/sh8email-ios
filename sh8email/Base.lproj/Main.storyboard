@@ -240,7 +240,7 @@ sh8.email은 가입없이 아무 계정으로
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-F4-Rim" customClass="CustomTextField" customModule="sh8email" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="Io3-C0-Fqx"/>
+                                    <constraint firstAttribute="width" constant="239" id="Io3-C0-Fqx"/>
                                     <constraint firstAttribute="height" constant="30" id="aBK-xa-X4h"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,7 +306,7 @@ sh8.email은 가입없이 아무 계정으로
                             <constraint firstItem="Qai-VL-Dm1" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leading" constant="20" id="jSq-fP-aBB"/>
                             <constraint firstItem="NPH-cn-zAS" firstAttribute="top" secondItem="LzW-9i-1tN" secondAttribute="bottom" constant="39" id="jbk-co-9lY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LzW-9i-1tN" secondAttribute="trailing" constant="4" id="lG4-dd-xmL"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" constant="6" id="mX2-7f-g8P"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" id="mX2-7f-g8P"/>
                             <constraint firstItem="rU5-F4-Rim" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leading" constant="20" id="pcR-FN-nAX"/>
                             <constraint firstItem="7no-o7-2tf" firstAttribute="top" secondItem="NPH-cn-zAS" secondAttribute="bottom" constant="20" id="yua-Hr-irS"/>
                         </constraints>
