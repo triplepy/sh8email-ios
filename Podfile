@@ -7,5 +7,6 @@ target 'sh8email' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
-  pod ‘Kanna’
+  pod 'Kanna'
+  pod 'KeenClient'
 end
