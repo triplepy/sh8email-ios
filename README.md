@@ -12,8 +12,8 @@
 
 ## Features
 
--[x] Can receive and view plain email
--[x] Can receive and view locked email
+- [x] Can receive and view plain email
+- [x] Can receive and view locked email
 
 ## Dependencies
 
@@ -37,4 +37,4 @@ Please report bugs, issues, suggestions for improvement under [Issues](https://g
 
 ## Upcoming Features
 
--[ ] Launches Safari on tapping external links in email content view
+- [ ] Launches Safari on tapping external links in email content view
