@@ -25,13 +25,12 @@ class Sh8mailDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
 		request(email!)
 	}
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 	
-	func request(_ email: Mail) {
+	/**
+		Sets up and sends request for given `Mail` object.
+		- Parameter email: the `Mail` object to send request and set up this UIView's fields.
+	*/
+	private func request(_ email: Mail) {
 		if (email.isSecret!) {
 			// show UIAlert for password
 			var inputTextField: UITextField?
@@ -59,7 +58,12 @@ class Sh8mailDetailViewController: UIViewController {
 		
 	}
 	
-	func requestDataAndSetFields(for email: Mail) {
+	/**
+		Fetches given `Mail`'s details.
+		- Parameters:
+			- email: the `Mail` object to fetch details of.
+	*/
+	private func requestDataAndSetFields(for email: Mail) {
 		let emailRequestURL = "https://sh8.email/rest/mail/\(email.recipient!)/\(email.pk!)/"
 		Alamofire.request(emailRequestURL).responseObject { (response: DataResponse<Mail>) in
 			guard let email = response.result.value else {
@@ -74,7 +78,13 @@ class Sh8mailDetailViewController: UIViewController {
 		}
 	}
 	
-	func requestDataAndSetFields(for email: Mail, using secretCode: String) {
+	/**
+		Fetches given `Mail`'s details.
+		- Parameters:
+			- email: the `Mail` object to fetch details of.
+			- secretCode: the `String` to unlock this email with.
+	*/
+	private func requestDataAndSetFields(for email: Mail, using secretCode: String) {
 		let emailRequestURL = "https://sh8.email/rest/mail/\(email.recipient!)/\(email.pk!)/"
 		let parameters = ["secret_code" : secretCode]
 		Alamofire.request(emailRequestURL, method: .post, parameters: parameters).responseObject { (response: DataResponse<Mail>) in
@@ -90,26 +100,29 @@ class Sh8mailDetailViewController: UIViewController {
 		}
 	}
 
-	
 	/**
 		refreshes the UI elements using given `Mail`.
-		- Parameter mail: the `Mail` object to set up the UI fields
+		- Parameter mail: the `Mail` object to set up the UI fields with
 	*/
-	func setFields(using mail: Mail) {
+	private func setFields(using mail: Mail) {
 		subjectLabel.text = mail.subject
 		senderLabel.text = mail.sender
 		recipDateLabel.text = mail.recipDate
 		contentView.loadHTMLString(mail.contents!, baseURL: nil)
 	}
-	
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+// MARK: - UIWebViewDelegate
+extension Sh8mailDetailViewController: UIWebViewDelegate {
+	// Opens link separately in Safari, not within the UIWebview
+	// Source:
+	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+		if navigationType == UIWebViewNavigationType.linkClicked {
+			UIApplication.shared.open(request.url!, options: [:], completionHandler: { (completed: Bool) in
+				
+			})
+			return false
+		}
+		return true
+	}
 }
