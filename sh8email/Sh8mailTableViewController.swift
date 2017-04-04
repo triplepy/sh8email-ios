@@ -46,7 +46,9 @@ class Sh8mailTableViewController: UITableViewController {
 			
 			if mailArray.count == 0 {
 				let alert = UIAlertController(title: "\(self.username!)@sh8.email", message: "수신된 메일이 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
-				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+				alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+					self.performSegue(withIdentifier: "noEmailReturnUnwindSegue", sender: self)
+				}))
 				self.present(alert, animated: true, completion: nil)
 			}
 
@@ -73,7 +75,6 @@ class Sh8mailTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension Sh8mailTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -99,42 +100,7 @@ extension Sh8mailTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected row: \(indexPath.row),  sender: \(self.emails[indexPath.row].sender)")
     }
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
+	
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -149,7 +115,7 @@ extension Sh8mailTableViewController {
 				let backItem = UIBarButtonItem()
 				backItem.title = "Back"
 				navigationItem.backBarButtonItem = backItem
-				print("passing data")
+				navigationItem.title = "\(username!)@sh8.email"
 				print(emails[indexPath.row])
 
 			}

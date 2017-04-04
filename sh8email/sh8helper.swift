@@ -49,8 +49,16 @@ class Sh8helper {
 			return str
 		}
 	}
-    
-    static func changeButtonBorder(button: UIButton, radius: CGFloat, width : CGFloat, color: UIColor){
+	
+	/**
+		Prettifies buttons by changing border attributes.
+		- Parameters:
+			- button: the target `UIButton`
+			- radius: the `cornerRadius` to set
+			- width: the `borderWidth` to set
+			- color: the `CGColor` to set this button color as
+	*/
+    static func changeButtonBorder(button: UIButton, radius: CGFloat, width : CGFloat, color: UIColor) {
         button.layer.cornerRadius = radius
         button.layer.borderWidth = width
         button.layer.borderColor = color.cgColor

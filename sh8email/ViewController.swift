@@ -11,15 +11,16 @@ import Alamofire
 import AlamofireObjectMapper
 
 class ViewController: UIViewController {
+	// MARK: - Environment
 	var username: String?
 	
-	// MARK: Outlets
+	// MARK: - Outlets
 	@IBOutlet var emailField: CustomTextField!
 	@IBOutlet var checkEmailButton: UIButton!
 	@IBOutlet var viewInstructionsButton: UIButton!
 	@IBAction func unwindToMain(segue: UIStoryboardSegue) {}
 
-	// MARK: VIEW
+	// MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
         Sh8helper.changeButtonBorder(button: self.checkEmailButton, radius: 3, width : 1, color: UIColor.clear)
@@ -43,8 +44,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	// MARK: - Actions
+	@IBAction func usernameEntered(_ sender: Any) {
+		checkMailButtonTapped(self)
+	}
     
-    // MARK: Actions
+	
 	@IBAction func checkMailButtonTapped(_ sender: Any) {
 		username = emailField.text!
 		if (username == "") {
@@ -55,12 +61,17 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "showEmailTableView", sender: nil)
 		}
 	}
+	
+	@IBAction func unwindToSh8MainView(segue: UIStoryboardSegue) {
+	
+	}
     
-    // MARK: Prepare
+    // MARK: - Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navVC = segue.destination as? UINavigationController{
             if let vc = navVC.visibleViewController as? Sh8mailTableViewController{
                 vc.username = username
+				vc.navigationItem.title = "\(username!)@sh8.email"
             }
         }
     }
