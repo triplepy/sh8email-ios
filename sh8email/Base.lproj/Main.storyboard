@@ -28,22 +28,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입없이 바로 받자!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-mS-pQP">
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-T9-gW4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QUe-T9-gW4">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="EnE-nr-h5P"/>
+                                    <constraint firstAttribute="height" constant="84" id="EnE-nr-h5P"/>
                                 </constraints>
-                                <string key="text">메일을 받긴 해야 하는데,
-내 메일함이 더러워지는 것도 싫고, 
-메일 계정 하나 더 만들기도 귀찮죠?
-sh8.email은 가입없이 아무 계정으로 
-바로 메일을 받아볼 수 있습니다.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">메일을 받긴 해야 하는데 내 메일함이 더러워지는 것도 싫고, 메일 계정 하나 더 만들기도 귀찮죠?
+sh8.email은 가입없이 아무 계정으로 바로 메일을 받아볼 수 있습니다.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions1_image" translatesAutoresizingMaskIntoConstraints="NO" id="Ujw-xL-tyn">
@@ -52,37 +55,53 @@ sh8.email은 가입없이 아무 계정으로
                                     <constraint firstAttribute="width" constant="310" id="Dv4-M0-zLx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="38u-8G-pju">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38u-8G-pju">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="N3P-KR-UJy"/>
                                 </constraints>
-                                <string key="text">- 온라인 쇼핑몰에서 물건을 구입할 때 
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">- 온라인 쇼핑몰에서 물건을 구입할 때 
 - 이벤트에 응모할 때 
 - 회원가입할 때 
-- 회원/로그인 기능 개발 시 테스트할 때</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="- 회원/로그인 기능 개발 시 테스트할 때">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QUe-T9-gW4" firstAttribute="top" secondItem="gEm-mS-pQP" secondAttribute="bottom" constant="20" id="8cb-OC-fKc"/>
+                            <constraint firstItem="38u-8G-pju" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leading" constant="40" id="0cq-nt-MjS"/>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="top" secondItem="gEm-mS-pQP" secondAttribute="bottom" constant="15" id="2OA-cc-HXt"/>
                             <constraint firstItem="Ujw-xL-tyn" firstAttribute="bottom" secondItem="gW0-OV-eWY" secondAttribute="top" constant="49" id="Gdj-88-4mt"/>
-                            <constraint firstItem="gEm-mS-pQP" firstAttribute="top" secondItem="RHG-KG-uww" secondAttribute="bottom" constant="20" id="PYi-iS-7ou"/>
-                            <constraint firstItem="QUe-T9-gW4" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leadingMargin" constant="40" id="U8M-mz-c7c"/>
+                            <constraint firstAttribute="trailing" secondItem="QUe-T9-gW4" secondAttribute="trailing" constant="20" id="KgX-7D-nuE"/>
+                            <constraint firstItem="gEm-mS-pQP" firstAttribute="top" secondItem="RHG-KG-uww" secondAttribute="bottom" constant="30" id="OAe-mz-Ccd"/>
                             <constraint firstItem="QUe-T9-gW4" firstAttribute="centerX" secondItem="gEm-mS-pQP" secondAttribute="centerX" id="X2r-D4-myb"/>
-                            <constraint firstItem="gEm-mS-pQP" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leadingMargin" constant="20" id="afp-5v-4Mr"/>
-                            <constraint firstItem="38u-8G-pju" firstAttribute="top" secondItem="QUe-T9-gW4" secondAttribute="bottom" constant="8" id="ibb-2e-2yr"/>
+                            <constraint firstAttribute="trailing" secondItem="38u-8G-pju" secondAttribute="trailing" constant="40" id="ZGb-ix-POy"/>
+                            <constraint firstItem="38u-8G-pju" firstAttribute="top" secondItem="QUe-T9-gW4" secondAttribute="bottom" constant="15" id="ibb-2e-2yr"/>
+                            <constraint firstItem="QUe-T9-gW4" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leading" constant="20" id="p9V-NO-dX5"/>
                             <constraint firstItem="QUe-T9-gW4" firstAttribute="centerX" secondItem="Ujw-xL-tyn" secondAttribute="centerX" id="tj3-nZ-29E"/>
+                            <constraint firstItem="gEm-mS-pQP" firstAttribute="leading" secondItem="5O1-yT-rjh" secondAttribute="leading" constant="20" id="wBi-uO-vu4"/>
                             <constraint firstItem="38u-8G-pju" firstAttribute="centerX" secondItem="QUe-T9-gW4" secondAttribute="centerX" id="z62-eu-fnO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gEm-mS-pQP" secondAttribute="trailing" constant="20" id="zAe-py-a4O"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuL-99-9Ir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428" y="1644"/>
+            <point key="canvasLocation" x="-1428" y="1643.9280359820091"/>
         </scene>
         <!--Instructions Page 2-->
         <scene sceneID="rOQ-En-ATd">
@@ -97,15 +116,22 @@ sh8.email은 가입없이 아무 계정으로
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남 몰래 받고 싶을 땐!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="7P7-q3-QOr">
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-kw-C1f">
-                                <string key="text">가입없이 편하게 받고는 싶고,
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="xUI-kw-C1f">
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">가입없이 편하게 받고는 싶고,
 남에게 보여주기는 싫고..</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instructions1_image" translatesAutoresizingMaskIntoConstraints="NO" id="JjV-Us-HFA">
@@ -114,27 +140,34 @@ sh8.email은 가입없이 아무 계정으로
                                     <constraint firstAttribute="height" constant="400" id="qSe-0v-GLP"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-bs-O1e">
-                                <string key="text">"쉿메일"로 메일에 
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXb-bs-O1e">
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">"쉿메일"로 메일에 
 비밀번호를 걸어보세요.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QXb-bs-O1e" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leading" constant="20" id="1V9-jd-3fr"/>
+                            <constraint firstAttribute="trailing" secondItem="xUI-kw-C1f" secondAttribute="trailing" constant="20" id="8Gp-Ts-a19"/>
                             <constraint firstItem="JjV-Us-HFA" firstAttribute="bottom" secondItem="IbE-76-s69" secondAttribute="top" constant="49" id="9zv-dg-G5t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QXb-bs-O1e" secondAttribute="trailing" constant="30" id="Bgo-5s-VXY"/>
+                            <constraint firstItem="xUI-kw-C1f" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leading" constant="20" id="Apx-qz-u5d"/>
+                            <constraint firstAttribute="trailing" secondItem="7P7-q3-QOr" secondAttribute="trailing" constant="20" id="EAb-co-Ggr"/>
                             <constraint firstItem="JjV-Us-HFA" firstAttribute="centerX" secondItem="xUI-kw-C1f" secondAttribute="centerX" id="ED6-yO-l3O"/>
+                            <constraint firstAttribute="trailing" secondItem="QXb-bs-O1e" secondAttribute="trailing" constant="20" id="F9w-85-iUJ"/>
+                            <constraint firstItem="7P7-q3-QOr" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leading" constant="20" id="SWa-IB-CLR"/>
                             <constraint firstItem="JjV-Us-HFA" firstAttribute="top" secondItem="QXb-bs-O1e" secondAttribute="bottom" constant="65" id="WlA-bH-kuN"/>
-                            <constraint firstItem="7P7-q3-QOr" firstAttribute="top" secondItem="9Lr-4y-eBS" secondAttribute="bottom" constant="20" id="XTb-wA-dn8"/>
-                            <constraint firstItem="xUI-kw-C1f" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="40" id="Zcd-0P-tfZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7P7-q3-QOr" secondAttribute="trailing" constant="20" id="dSL-sy-vbV"/>
-                            <constraint firstItem="xUI-kw-C1f" firstAttribute="top" secondItem="7P7-q3-QOr" secondAttribute="bottom" constant="20" id="ijm-xM-Hie"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xUI-kw-C1f" secondAttribute="trailing" constant="40" id="lOX-AM-FMu"/>
-                            <constraint firstItem="QXb-bs-O1e" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="30" id="r2F-pF-i3u"/>
-                            <constraint firstItem="7P7-q3-QOr" firstAttribute="leading" secondItem="kgK-JG-L6c" secondAttribute="leadingMargin" constant="20" id="wpk-US-qKY"/>
+                            <constraint firstItem="7P7-q3-QOr" firstAttribute="top" secondItem="9Lr-4y-eBS" secondAttribute="bottom" constant="30" id="XTb-wA-dn8"/>
+                            <constraint firstItem="xUI-kw-C1f" firstAttribute="top" secondItem="7P7-q3-QOr" secondAttribute="bottom" constant="50" id="ijm-xM-Hie"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -162,22 +195,31 @@ sh8.email은 가입없이 아무 계정으로
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세상에서 가장 조용한 이메일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vnf-pE-H0X">
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-qq-sL2">
-                                <string key="text">"쉿메일"로 전달된 메일은 읽지 않아도
-24시간 후 자동으로 지워지며,
-읽은 후에는 불편하지 않도록 똑똑하게
-알아서 지워줍니다.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-qq-sL2">
+                                <attributedString key="attributedText">
+                                    <fragment content="&quot;쉿메일&quot;로 전달된 메일은 읽지 않아도 24시간 후 자동으로 지워지며, 읽은 후에는 불편하지 않도록 똑똑하게 알아서 지워줍니다.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re2-T1-uPJ">
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="sh8.email 사용하기"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.48627450979999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6Mt-Ph-8eB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="sh8.email 사용하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="returnToMainButton:" destination="oli-EF-dbn" eventType="touchUpInside" id="k1i-Rj-jb1"/>
                                 </connections>
@@ -185,17 +227,17 @@ sh8.email은 가입없이 아무 계정으로
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9fY-qq-sL2" firstAttribute="top" secondItem="vnf-pE-H0X" secondAttribute="bottom" constant="20" id="1Ax-oy-NjJ"/>
+                            <constraint firstAttribute="trailing" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="20" id="9ek-mx-KhP"/>
+                            <constraint firstAttribute="trailing" secondItem="9fY-qq-sL2" secondAttribute="trailing" constant="20" id="L8D-z0-XEL"/>
+                            <constraint firstAttribute="trailing" secondItem="vnf-pE-H0X" secondAttribute="trailing" constant="20" id="Lot-D4-TIA"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="bottom" secondItem="HcF-CC-otK" secondAttribute="top" constant="49" id="NzG-qe-RHu"/>
+                            <constraint firstItem="9fY-qq-sL2" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leading" constant="20" id="RaC-xa-8d4"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="top" secondItem="re2-T1-uPJ" secondAttribute="bottom" constant="65" id="WoV-la-XcQ"/>
-                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="30" id="X6R-f1-uwU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="re2-T1-uPJ" secondAttribute="trailing" constant="30" id="cms-9H-POc"/>
-                            <constraint firstItem="9fY-qq-sL2" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="40" id="g7Y-sD-Yr1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9fY-qq-sL2" secondAttribute="trailing" constant="40" id="ixo-SS-W9L"/>
+                            <constraint firstItem="vnf-pE-H0X" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leading" constant="20" id="XSe-aJ-urx"/>
+                            <constraint firstItem="vnf-pE-H0X" firstAttribute="top" secondItem="SjR-SO-aq6" secondAttribute="bottom" constant="30" id="bqK-wT-EgW"/>
+                            <constraint firstItem="re2-T1-uPJ" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leading" constant="20" id="clY-Yf-jLc"/>
                             <constraint firstItem="XhL-fQ-g95" firstAttribute="centerX" secondItem="9fY-qq-sL2" secondAttribute="centerX" id="nAO-NC-U1f"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vnf-pE-H0X" secondAttribute="trailing" constant="20" id="qjs-hr-m1W"/>
-                            <constraint firstItem="vnf-pE-H0X" firstAttribute="leading" secondItem="WkH-A8-bhQ" secondAttribute="leadingMargin" constant="20" id="xXS-BU-AAg"/>
-                            <constraint firstItem="vnf-pE-H0X" firstAttribute="top" secondItem="SjR-SO-aq6" secondAttribute="bottom" constant="20" id="xmP-p6-aMC"/>
+                            <constraint firstItem="9fY-qq-sL2" firstAttribute="top" secondItem="vnf-pE-H0X" secondAttribute="bottom" constant="50" id="z78-2m-P9s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -205,7 +247,7 @@ sh8.email은 가입없이 아무 계정으로
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Gv-7n-OFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="78h-TP-Ghg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-151" y="1644"/>
+            <point key="canvasLocation" x="-151.19999999999999" y="1643.9280359820091"/>
         </scene>
         <!--sh8.email-->
         <scene sceneID="vBs-Od-p0O">
@@ -240,7 +282,7 @@ sh8.email은 가입없이 아무 계정으로
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rU5-F4-Rim" customClass="CustomTextField" customModule="sh8email" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="Io3-C0-Fqx"/>
+                                    <constraint firstAttribute="width" constant="239" id="Io3-C0-Fqx"/>
                                     <constraint firstAttribute="height" constant="30" id="aBK-xa-X4h"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,7 +351,7 @@ sh8.email은 가입없이 아무 계정으로
                             <constraint firstItem="Qai-VL-Dm1" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leading" constant="20" id="jSq-fP-aBB"/>
                             <constraint firstItem="NPH-cn-zAS" firstAttribute="top" secondItem="LzW-9i-1tN" secondAttribute="bottom" constant="39" id="jbk-co-9lY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LzW-9i-1tN" secondAttribute="trailing" constant="4" id="lG4-dd-xmL"/>
-                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" constant="6" id="mX2-7f-g8P"/>
+                            <constraint firstItem="LzW-9i-1tN" firstAttribute="leading" secondItem="rU5-F4-Rim" secondAttribute="trailing" id="mX2-7f-g8P"/>
                             <constraint firstItem="rU5-F4-Rim" firstAttribute="leading" secondItem="GND-dH-ZRN" secondAttribute="leading" constant="20" id="pcR-FN-nAX"/>
                             <constraint firstItem="7no-o7-2tf" firstAttribute="top" secondItem="NPH-cn-zAS" secondAttribute="bottom" constant="20" id="yua-Hr-irS"/>
                         </constraints>
@@ -341,7 +383,7 @@ sh8.email은 가입없이 아무 계정으로
                                 <rect key="frame" x="0.0" y="92" width="375" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8G-wV-mgi" id="yVn-t0-Waz">
-                                    <frame key="frameInset" width="375" height="150"/>
+                                    <frame key="frameInset" width="375" height="150.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oMn-ol-7aQ">
